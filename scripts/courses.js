@@ -1,23 +1,29 @@
 const courses = [
-    {name: "Web Development", credits: 3, completed: true},
-    {name: "Teachings and Doctrine of the Book of Mormon", credits: 3, completed: false},
-    {name: "Organizational Leadership", credits: 3, completed: false}
+    { name: "Web Development", credits: 3, completed: true },
+    { name: "Teachings and Doctrine of the Book of Mormon", credits: 3, completed: false },
+    { name: "Organizational Leadership", credits: 3, completed: false }
 ];
 
-function displayCourses() {
-    const courseList = document.querySelector('.course-list');
-    courseList.innerHTML = '';
+function displayCourses(filteredCourses = courses) {
+    const courseList = document.getElementById('courses'); // Make sure this ID exists in your HTML!
+    if (!courseList) {
+        console.error("Element with ID 'courses' not found.");
+        return;
+    }
 
-    courses.forEach(course => {
+    courseList.innerHTML = ''; // Clear existing content
 
+    filteredCourses.forEach(course => {
         const courseElement = document.createElement('div');
         courseElement.classList.add('course');
 
         const courseName = document.createElement('div');
-        courseElement.classList.add('course');
+        courseName.classList.add('course-name');
+        courseName.textContent = course.name;
 
         const courseCredits = document.createElement('div');
-        courseElement.classList.add('course');
+        courseCredits.classList.add('course-credits');
+        courseCredits.textContent = `Credits: ${course.credits}`;
 
         if (course.completed) {
             courseElement.classList.add('completed');
@@ -30,19 +36,10 @@ function displayCourses() {
 }
 
 function filterCourses(courseType) {
-    const filterCourses = courses.filter(course => courseType === 'all' || course.name.includes(courseType)); /* === is strict equality (no conversion), || is used for logical OR (returns true if either of the conditions is true) */
+    const filteredCourses = courses.filter(course => 
+        courseType === 'all' || course.name.toLowerCase().includes(courseType.toLowerCase())
+    );
     displayCourses(filteredCourses);
 }
 
-document.addEventListener('DOMContentLoaded', displayCourses);
-
-function filterCourses(type) {
-    let courses = document.querySelectorAll(".course");
-    courses.forEach(course => {
-        if (type === "all" || course.classList.contains(type.toLowerCase())) {
-            course.style.display = "inline-block";
-        } else {
-            course.style.display = "none";
-        }
-    });
-}
+document.addEventListener('DOMContentLoaded', () => displayCourses());
