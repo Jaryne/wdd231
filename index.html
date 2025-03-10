@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description edit!!**">
+    <meta name="author" content="Jaryne Manrique">
+    <title>Jaryne Moraleda Manrique</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <img src="images/profile.jpg" alt="Jaryne Manrique">
+        <span>Jaryne Manrique</span>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber.html">Chamber</a></li>
+            <li><a href="https://github.com/Jaryne" target="_blank">Github Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/jaryne-manrique/" target="_blank">LinkedIn</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        <div class="cards">
+            <section class="card">
+                <h2>Course Work</h2>
+                <ul>
+                    <li>-  </li>
+                    <li>-  </li>
+                    <li>-  </li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Section2</h2>
+                <!--content s2-->
+            </section>
+            
+            <section class="certificate">
+                <h2>Web and Computer Programming Certificate</h2>
+                <div class="filters">
+                    <button onclick="filterCourses('all')">All</button>
+                    <button onclick="filterCourses('CSE')">CSE</button>
+                    <button onclick="filterCourses('WDD')">WDD</button>
+                </div>
+    
+                <div id="courses">
+                    <div class="course cse">CSE 110</div>
+                    <div class="course wdd">WDD 130</div>
+                    <div class="course cse">CSE 111</div>
+                    <div class="course cse">CSE 210</div>
+                    <div class="course wdd">WDD 131</div>
+                    <div class="course wdd">WDD 231</div>
+                </div>
+            </section>
+        </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jaryne Manrique, All rights reserved.</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>

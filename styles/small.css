@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    font-family: 'DM Serif Text', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D5C5C8;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #a55f5f;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header img {
+    width: 55px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+h1, h2, h3 {
+    font-family: 'DM Serif Text', serif;
+}
+
+/* Navigation */
+nav {
+    background-color: #604D53;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #D5C5C8;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover, 
+nav a.active {
+    color: gray;
+}
+
+/* Main Content Wrapper */
+.main-container {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 85%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Cards Section */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 2px 2px 10px gray;
+    padding: 15px;
+    width:550px;
+    text-align: left;
+    border-radius: 8px;
+}
+
+/* Certificate Section */
+.certificate {
+    background-color: #604D53;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.filters button {
+    padding: 10px;
+    border: none;
+    background-color: #332c2c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filters button:hover {
+    background-color: #444;
+}
+
+/* Course Grid */
+#courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.course {
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cse {
+    background-color: brown;
+}
+
+.wdd {
+    background-color: #DB7F8E;
+}
+
+/* Footer */
+footer {
+    background-color: #604D53;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+}

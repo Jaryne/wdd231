@@ -1,0 +1,16 @@
+/* 768px and up */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .completed {
+        background-color: #90ee90;
+    }
+}
+
