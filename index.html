@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Homepage">
+    <meta name="description" content="WDD231 Homepage - Web development coursework and projects.">
     <meta name="author" content="Jaryne Manrique">
-    <title>Jaryne Moraleda Manrique</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <title>Homepage</title>
 
+    <!-- Google Font Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- DM Serif Text Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -16,8 +21,8 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
-
 </head>
+
 <body>
     <header>
         <img src="images/profile.jpg" alt="This is me!">
@@ -39,9 +44,9 @@
             <section class="card">
                 <h2>Course Work</h2>
                 <ul>
-                    <li>-  </li>
-                    <li>-  </li>
-                    <li>-  </li>
+                    <li>- </li>
+                    <li>- </li>
+                    <li>- </li>
                 </ul>
             </section>
 
@@ -49,7 +54,7 @@
                 <h2>Section2</h2>
                 <!--content s2-->
             </section>
-            
+
             <section class="certificate">
                 <h2>Web and Computer Programming Certificate</h2>
                 <div class="filters">
@@ -57,7 +62,7 @@
                     <button onclick="filterCourses('CSE')">CSE</button>
                     <button onclick="filterCourses('WDD')">WDD</button>
                 </div>
-    
+
                 <div id="courses">
                     <div class="course cse">CSE 110</div>
                     <div class="course wdd">WDD 130</div>
@@ -74,6 +79,7 @@
         <p>&copy; <span id="currentyear"></span> Jaryne Manrique, All rights reserved.</p>
         <p id="lastModified"></p>
     </footer>
-    
+
 </body>
+
 </html>
