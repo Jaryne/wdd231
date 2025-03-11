@@ -19,8 +19,8 @@ header {
 }
 
 header img {
-    width: 100px;
-    height: 115px;
+    width: auto;
+    height: auto;
     border-radius: 20%;
 }
 
