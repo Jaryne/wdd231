@@ -4,28 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD231 Homepage - Web development coursework and projects.">
+    <meta name="description" content="WDD231 Homepage - These are web development coursework and projects.">
     <meta name="author" content="Jaryne Manrique">
     <title>Jaryne Manrique | Homepage</title>
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Khmer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Khmer&display=swap"
+        rel="stylesheet">
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" as="style">
 
     <link rel="preload" href="styles/normalize.css" as="style">
-    <link rel="preload" href="styles/small.css" as="style">
+    <link rel="preload" href="styles/smaller.css" as="style">
     <link rel="preload" href="styles/larger.css" as="style">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/smaller.css">
     <link rel="stylesheet" href="styles/larger.css">
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/courses.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 
 </head>
 
@@ -34,8 +36,9 @@
         <img src="images/profile.webp" alt="This is me!">
         <span>Jaryne Manrique</span>
     </header>
+
     <nav>
-        <ul>
+        <ul id="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="chamber.html">Chamber</a></li>
             <li><a href="https://github.com/Jaryne" target="_blank">Github Profile</a></li>
@@ -70,10 +73,8 @@
                     <li data-action="course-list">WDD</li>
                     <li data-action="course-list">CSE</li>
                 </ul>
-
-                <ul id="courses">
-
-                </ul>
+                <ul id="courses"></ul>
+                <p id="totalCredits"></p>
             </section>
         </div>
     </main>

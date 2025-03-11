@@ -77,53 +77,62 @@ const courses = [
         completed: false
     }
 ]
-function courseDisplay(a1) {
+function courseDisplay(course) {
     const display = document.createElement('li');
-    if (a1.completed == true) {
-        display.className = `${a1.subject} completed`
-        display.textContent = `${a1.subject} ${a1.number}`;
-    }
-    else {
-        display.className = `${a1.subject} incomplete`
-        display.textContent = `${a1.subject} ${a1.number}`;
+    if (course.completed === true) {
+        display.className = `${course.subject} completed`;
+        display.textContent = `${course.subject} ${course.number}`;
+    } else {
+        display.className = `${course.subject} incomplete`;
+        display.textContent = `${course.subject} ${course.number}`;
     }
 
-    courseList.appendChild(display);
+    document.getElementById('courses').appendChild(display);
 }
 
-const courseList = document.getElementById('courses');
+// Total Credits Calculation (for visible courses only)
+function updateTotalCredits(coursesToCount) {
+    const totalCredits = coursesToCount.filter(course => course.completed)
+                                       .reduce((acc, course) => acc + course.credits, 0);
+
+    document.getElementById('totalCredits').textContent = `Total Credits: ${totalCredits}`;
+}
+
+// Initial course display and total credits calculation
+updateTotalCredits(courses); // Calculate total credits when page loads
+courses.forEach(course => courseDisplay(course)); // Display all courses initially
+
+// Filter courses when a filter button is clicked
 const buttons = document.querySelectorAll('[data-action="course-list"]');
-
-courses.forEach(
-    courseDisplay
-)
-
 buttons.forEach(button => {
     button.addEventListener("click", (e) => {
         const result = e.target.textContent;
-        courseList.innerHTML = "";
-        if (result != "All") {
-            if (result == "Completed" || result == "Incomplete") {
-                const list = courses.filter((course) => {
-                    let conditional = result == "Completed" ? true : false;
-                    return course.completed == conditional;
+        const courseList = document.getElementById('courses');
+        courseList.innerHTML = ""; // Clear the current list of displayed courses
 
-                })
-                list.forEach(item => {
-                    courseDisplay(item);
-                })
+        let filteredCourses = [];
+
+        if (result !== "All") {
+            if (result === "Completed" || result === "Incomplete") {
+                filteredCourses = courses.filter((course) => {
+                    return course.completed === (result === "Completed");
+                });
+            } else {
+                filteredCourses = courses.filter((course) => {
+                    return course.subject === result;
+                });
             }
-            const newList = courses.filter((course) => {
-                return course.subject == result;
-            })
-            newList.forEach(element => {
-                courseDisplay(element);
-            })
+
+            // Display filtered courses
+            filteredCourses.forEach(course => courseDisplay(course));
+
+        } else {
+            // Show all courses if "All" is selected
+            filteredCourses = courses;
+            courses.forEach(course => courseDisplay(course));
         }
 
-        else {
-            courses.forEach(courseDisplay);
-
-        }
-    })
+        // Update total credits after filtering
+        updateTotalCredits(filteredCourses);
+    });
 });
