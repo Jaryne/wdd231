@@ -65,7 +65,7 @@ nav a.active {
 }
 
 #navMenu a.current .dot {
-    display: block; /* Show dot when the link has the 'current' class */
+    display: block; /* Show dot when the link has the 'current" class */
 }
 
 /* Main Content Wrapper */
