@@ -75,6 +75,11 @@ nav a.active {
     border-radius: 8px;
 }
 
+.card img {
+    width: 550px;
+    height: auto;
+}
+
 /* Certificate Section */
 .certificate {
     background-color: #604D53;
