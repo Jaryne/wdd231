@@ -10,7 +10,14 @@
     }
 
     .completed {
-        background-color: #90ee90;
+        background-color: saddlebrown;
+        border-left: 5px solid #e0e0e0;
     }
+    
+    .not-completed {
+        background-color: #654214;
+        border-left: 5px solid #e0e0e0;
+    }
+    
 }
 

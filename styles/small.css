@@ -92,7 +92,7 @@ nav a.active {
     margin: 10px 0;
 }
 
-.filters button {
+.filters li {
     padding: 10px;
     border: none;
     background-color: #332c2c;
@@ -102,7 +102,7 @@ nav a.active {
     transition: 0.3s;
 }
 
-.filters button:hover {
+.filters li:hover {
     background-color: #444;
 }
 
