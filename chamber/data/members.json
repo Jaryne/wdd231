@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Caspar Steel Roofing Inc",
+        "address": "Blk 4 Lot 11 Citizen St., Interville Quezon City, Quezon City",
+        "phone": "0920 974 5828",
+        "website": "https://casparroofing.ph/",
+        "image": "images/caspar-logo.webp",
+        "membership": 3
+    },
+    {
+        "name": "Stone Depot",
+        "address": "Pope John Paul II Avenue Corner Golam Drive Kasambagan, Cebu City, Cebu",
+        "phone": "(032) 272 4462",
+        "website": "https://stonedepot.ph/",
+        "image": "images/stone-depot.webp",
+        "membership": 2
+    },
+    {
+        "name": "Eurotel Hotel Naga",
+        "address": "Naga City, Camarines Sur",
+        "phone": "0918 637 7656",
+        "website": "https://eurotel-hotel.com/",
+        "image": "images/eurotel.jpg",
+        "membership": 1
+    }
+]

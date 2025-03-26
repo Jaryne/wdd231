@@ -1,0 +1,75 @@
+@media (min-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    /* Hero Section */
+    .hero img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .hero-button {
+        bottom: 20%;
+        padding: 15px 30px;
+    }
+
+    /* Main Content */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .info-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    /* Members Section */
+    .members-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        padding: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        #members-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/* Responsive grid */
+            gap: 20px; /* space between rows and columns */
+        }
+
+        /* Larger screens -> equally spaced rows and cards */
+        .member-row {
+            gap: 20px;
+        }
+
+        .member-card {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+            font-size: 1rem;
+        }
+    }
+
+    /* Footer */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+    }
+}
