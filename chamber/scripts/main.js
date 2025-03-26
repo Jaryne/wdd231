@@ -38,13 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   }
 
-  // Display members in the specified view (grid or list)
+  // Display members in the specified view (grid or list -- still working on it)
   function displayMembers(members, viewType) {
-      // Clear any existing members
       membersList.innerHTML = "";
       members.forEach(member => {
           const memberDiv = document.createElement("div");
-          // Add classes for styling purposes
           memberDiv.classList.add("member", viewType);
 
           memberDiv.innerHTML = `
@@ -58,9 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // Event listener for grid view button
   gridViewBtn.addEventListener("click", function () {
-      // Get stored members from localStorage (or fallback to membersData)
       const storedMembers = localStorage.getItem("members");
       if (storedMembers) {
           const members = JSON.parse(storedMembers);
@@ -70,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 
-  // Event listener for list view button
   listViewBtn.addEventListener("click", function () {
       const storedMembers = localStorage.getItem("members");
       if (storedMembers) {
@@ -81,6 +76,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 
-  // Begin by fetching the members data
   fetchMembers();
 });
