@@ -51,16 +51,13 @@
     #members-list.grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* Adjusts number of columns */
         gap: 15px;
-        /* Space between rows and columns */
         padding: 10px;
-        /* Adds some padding around the grid */
     }
 
     /* Individual Grid Items */
     .member.grid {
-        background-color: #6c849c;
+        background-color: white;
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -70,21 +67,17 @@
 
     .member.grid img {
         width: 100px;
-        /* Adjust image size */
         height: auto;
-        /* Keep proportions */
         margin-bottom: 10px;
     }
 
     .member.grid h3 {
         font-size: 1.2rem;
-        /* Slightly smaller font size */
         margin-bottom: 5px;
     }
 
     .member.grid p {
         font-size: 0.9rem;
-        /* Slightly smaller text for address and phone */
         margin: 2px 0;
     }
 
@@ -97,7 +90,6 @@
 
     .member.grid:hover {
         transform: scale(1.05);
-        /* Add a hover effect */
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
