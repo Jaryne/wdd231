@@ -1,4 +1,5 @@
 @media (min-width: 768px) {
+
     /* Header */
     header {
         flex-direction: row;
@@ -46,24 +47,115 @@
         padding: 2rem;
     }
 
-    @media (min-width: 768px) {
-        #members-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/* Responsive grid */
-            gap: 20px; /* space between rows and columns */
-        }
+    /* Grid View Styling */
+    #members-list.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Adjusts number of columns */
+        gap: 15px;
+        /* Space between rows and columns */
+        padding: 10px;
+        /* Adds some padding around the grid */
+    }
 
-        /* Larger screens -> equally spaced rows and cards */
-        .member-row {
-            gap: 20px;
-        }
+    /* Individual Grid Items */
+    .member.grid {
+        background-color: #6c849c;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-        .member-card {
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
-            font-size: 1rem;
-        }
+    .member.grid img {
+        width: 100px;
+        /* Adjust image size */
+        height: auto;
+        /* Keep proportions */
+        margin-bottom: 10px;
+    }
+
+    .member.grid h3 {
+        font-size: 1.2rem;
+        /* Slightly smaller font size */
+        margin-bottom: 5px;
+    }
+
+    .member.grid p {
+        font-size: 0.9rem;
+        /* Slightly smaller text for address and phone */
+        margin: 2px 0;
+    }
+
+    .member.grid a {
+        font-size: 0.9rem;
+        color: #003366;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .member.grid:hover {
+        transform: scale(1.05);
+        /* Add a hover effect */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* List View for Larger Screens */
+    #members-list.list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .member.list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+
+    .member.list img {
+        width: 60px;
+        height: auto;
+        border-radius: 3px;
+    }
+
+    .member.list h3 {
+        margin: 0;
+        font-size: 16px;
+        flex-grow: 1;
+    }
+
+    .member.list p,
+    .member.list a {
+        margin: 0;
+        font-size: 14px;
+        flex-grow: 1;
+    }
+
+    .member.list a {
+        color: #003366;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Larger Member Cards */
+    .member-card {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+        font-size: 1rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .member-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
     /* Footer */

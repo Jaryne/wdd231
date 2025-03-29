@@ -1,29 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const navMenu = document.getElementById("navMenu");
+    const hamburger = document.querySelector(".hamburger");
+    const overlay = document.getElementById("overlay");
     const membersList = document.getElementById("members-list");
     const gridViewBtn = document.getElementById("grid-view");
     const listViewBtn = document.getElementById("list-view");
-    const navMenu = document.getElementById("navMenu");
-    const hamburger = document.querySelector(".hamburger");
 
     // Global variable to store members data
     let membersData = [];
 
     // Function to toggle navigation menu
     function toggleMenu() {
-        if (navMenu.style.display === "flex") {
-            navMenu.style.display = "none";
-        } else {
-            navMenu.style.display = "flex";
-        }
-    }
-
-    // Add event listener to hamburger menu
-    hamburger.addEventListener("click", toggleMenu);
-    function toggleMenu() {
-        const navMenu = document.getElementById("navMenu");
-        const overlay = document.getElementById("overlay");
-
-        // Toggle menu visibility
         if (navMenu.classList.contains("slide-in")) {
             navMenu.classList.remove("slide-in");
             navMenu.classList.add("slide-out");
@@ -35,17 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // For highlighting current page
+    // Add event listener to hamburger menu and overlay
+    hamburger.addEventListener("click", toggleMenu);
+    overlay.addEventListener("click", toggleMenu);
+
+    // Highlight the current page in navigation
     const currentPage = window.location.pathname;
     const navLinks = document.querySelectorAll('nav ul li a');
-
     navLinks.forEach(link => {
         if (link.getAttribute('href').includes(currentPage)) {
             link.classList.add('active');
         }
     });
 
-    // Fetch members from a JSON file
+    // Fetch members data from a JSON file
     async function fetchMembers() {
         try {
             const response = await fetch("data/members.json");
@@ -54,16 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             const data = await response.json();
             membersData = data;
-            // Store the data in localStorage for view toggling
-            localStorage.setItem("members", JSON.stringify(data));
-            // Initially display members as a grid
-            displayMembers(data, "grid");
+            localStorage.setItem("members", JSON.stringify(data)); // Store data for toggling
+            displayMembers(data, "grid"); // Default view
         } catch (error) {
             console.error("Error fetching members:", error);
         }
     }
 
-    // Display members in the specified view (grid or list -- still working on it)
+    // Display members in the specified view type
     function displayMembers(members, viewType) {
         membersList.innerHTML = "";
         members.forEach(member => {
@@ -81,25 +69,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    gridViewBtn.addEventListener("click", function () {
+    // Grid/List View Toggle
+    function handleViewToggle(viewType) {
         const storedMembers = localStorage.getItem("members");
-        if (storedMembers) {
-            const members = JSON.parse(storedMembers);
-            displayMembers(members, "grid");
-        } else {
-            displayMembers(membersData, "grid");
-        }
-    });
+        const members = storedMembers ? JSON.parse(storedMembers) : membersData;
+        displayMembers(members, viewType);
+    }
 
-    listViewBtn.addEventListener("click", function () {
-        const storedMembers = localStorage.getItem("members");
-        if (storedMembers) {
-            const members = JSON.parse(storedMembers);
-            displayMembers(members, "list");
-        } else {
-            displayMembers(membersData, "list");
-        }
-    });
+    // Event listeners for grid and list view buttons
+    gridViewBtn.addEventListener("click", () => handleViewToggle("grid"));
+    listViewBtn.addEventListener("click", () => handleViewToggle("list"));
 
+    // Initialize by fetching members data
     fetchMembers();
 });
