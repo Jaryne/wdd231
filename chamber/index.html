@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Philippines Chamber Directory - Members, Events, and Weather Updates">
+    <meta name="description" content="Homepage - find weather forecasts and members here">
     <meta name="author" content="Jaryne Manrique">
-    <title>Philippines Directory</title>
+    <title>Homepage</title>
 
     <!-- Open Graph tags -->
     <meta property="og:title" content="Testing Social Media Meta Data">
@@ -25,6 +25,7 @@
     <!-- Scripts -->
     <script src="scripts/date.js" defer></script>
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 </head>
 
 <body>
@@ -33,17 +34,15 @@
             <img src="images/rizal-monument.webp" alt="Rizal Monument Chamber Logo">
             <h2>Philippines Directory</h2>
         </div>
-
         <nav>
             <div class="hamburger" onclick="toggleMenu()">☰</div>
-            <div id="overlay" onclick="toggleMenu()"></div> <!-- Overlay -->
-            <ul id="navMenu" class="slide-out">
+            <ul id="navMenu">
                 <li><a href="index.html">Home<span class="dot"></span></a></li>
-                <li><a href="directory.html" class="active">Directory<span class="dot"></span></a></li>
+                <li><a href="directory.html">Directory<span class="dot"></span></a></li>
                 <li><a href="#">Join<span class="dot"></span></a></li>
                 <li><a href="#">Discover<span class="dot"></span></a></li>
             </ul>
-        </nav>        
+        </nav>
     </header>
 
     <section class="hero">
@@ -53,6 +52,21 @@
 
     <main>
         <h1>Philippines Directory</h1>
+
+        <section class="info-sections">
+            <div class="section events">
+                <h2>Upcoming Events</h2>
+                <p>Stay updated with the latest happenings.</p>
+            </div>
+            <div class="section weather">
+                <h2>Current Weather</h2>
+                <div id="weather-info"></div>
+            </div>
+            <div class="section forecast">
+                <h2>Weather Forecast</h2>
+                <div id="forecast-info"></div>
+            </div>
+        </section>
 
         <div class="view-toggle">
             <button id="grid-view" aria-label="Switch to card view">Grid</button>

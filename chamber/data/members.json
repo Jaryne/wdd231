@@ -22,5 +22,37 @@
         "website": "https://eurotel-hotel.com/",
         "image": "images/eurotel.jpg",
         "membership": 1
+    },
+    {
+        "name": "Jollibee",
+        "address": "Quezon City, Metro Manila, Philippines",
+        "phone": "#8-700",
+        "website": "https://www.jollibee.com.ph",
+        "image": "images/jollibee-logo.webp",
+        "membership": 3
+    },
+    {
+        "name": "SM Supermalls",
+        "address": "Pasay City, Metro Manila, Philippines",
+        "phone": "+63 2 8876 1111",
+        "website": "https://www.smsupermalls.com",
+        "image": "images/sm-supermalls.webp",
+        "membership": 2
+    },
+    {
+        "name": "BDO Unibank",
+        "address": "Makati City, Metro Manila, Philippines",
+        "phone": "+63 2 8631 8000",
+        "website": "https://www.bdo.com.ph",
+        "image": "images/bdo-unibank.webp",
+        "membership": 2
+    },
+    {
+        "name": "Meralco",
+        "address": "Pasig City, Metro Manila, Philippines",
+        "phone": "+63 2 16211",
+        "website": "https://www.meralco.com.ph",
+        "image": "images/meralco-logo.webp",
+        "membership": 1
     }
 ]
