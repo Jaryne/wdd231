@@ -229,7 +229,7 @@ h1 {
 #members-list.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
-    gap: 20px; /* Space between cards */
+    gap: 20px;
     justify-content: center; /* Centers the entire grid */
     padding: 10px;
 }
@@ -237,7 +237,7 @@ h1 {
 /* Member Cards in Grid View */
 .member.grid {
     display: flex;
-    flex-direction: column; /* Ensures image and content stack neatly */
+    flex-direction: column;
     align-items: center; /* Centers content in the card */
     background-color: white;
     padding: 15px;
@@ -248,19 +248,19 @@ h1 {
 }
 
 .member.grid img {
-    width: 100px; /* Adjust image size */
-    height: auto; /* Maintain proportions */
-    margin-bottom: 10px; /* Adds spacing below the image */
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .member.grid h3 {
     font-size: 1.2rem;
-    margin: 10px 0 5px; /* Add spacing above and below the heading */
+    margin: 10px 0 5px;
 }
 
 .member.grid p {
     font-size: 0.9rem;
-    margin: 2px 0; /* Keeps the content compact */
+    margin: 2px 0;
 }
 
 .member.grid a {
@@ -268,7 +268,7 @@ h1 {
     color: #003366;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 10px; /* Adds spacing above the link */
+    margin-top: 10px;
 }
 
 .member.grid:hover {
