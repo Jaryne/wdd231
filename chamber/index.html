@@ -34,15 +34,17 @@
             <img src="images/rizal-monument.webp" alt="Rizal Monument Chamber Logo">
             <h2>Philippines Directory</h2>
         </div>
+
         <nav>
             <div class="hamburger" onclick="toggleMenu()">☰</div>
-            <ul id="navMenu">
-                <li><a href="index.html">Home<span class="dot"></span></a></li>
-                <li><a href="directory.html">Directory<span class="dot"></span></a></li>
+            <div id="overlay" onclick="toggleMenu()"></div> <!-- Overlay -->
+            <ul id="navMenu" class="slide-out">
+                <li><a href="index.html" class="active">Home<span class="dot"></span></a></li>
+                <li><a href="directory.html" class="dot">Directory<span class="dot"></span></a></li>
                 <li><a href="#">Join<span class="dot"></span></a></li>
                 <li><a href="#">Discover<span class="dot"></span></a></li>
             </ul>
-        </nav>
+        </nav>        
     </header>
 
     <section class="hero">
@@ -69,7 +71,7 @@
         </section>
 
         <div class="view-toggle">
-            <button id="grid-view" aria-label="Switch to card view">Grid</button>
+            <button id="grid-view" aria-label="Switch to grid view">Grid</button>
             <button id="list-view" aria-label="Switch to list view">List</button>
         </div>
 
