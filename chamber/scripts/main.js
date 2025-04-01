@@ -11,12 +11,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to toggle navigation menu
     function toggleMenu() {
-        const isMenuOpen = navMenu.classList.contains("slide-in");
-        navMenu.classList.toggle("slide-in", !isMenuOpen);
-        navMenu.classList.toggle("slide-out", isMenuOpen);
-        overlay.classList.toggle("show", !isMenuOpen); // Toggle overlay visibility
+        const navMenu = document.getElementById("navMenu");
+        const overlay = document.getElementById("overlay");
+    
+        if (navMenu.classList.contains("slide-out")) {
+            navMenu.classList.remove("slide-out");
+            navMenu.classList.add("slide-in");
+            overlay.style.display = "block"; // Show overlay
+            setTimeout(() => {
+                overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Gradually fade in
+            }, 10);
+        } else {
+            overlay.style.backgroundColor = "rgba(0, 0, 0, 0)"; // Fade out
+            setTimeout(() => {
+                overlay.style.display = "none"; // Hide after fade
+            }, 500);
+            navMenu.classList.remove("slide-in");
+            navMenu.classList.add("slide-out");
+        }
     }
-
+    
     // Add event listener to hamburger menu and overlay
     hamburger.addEventListener("click", toggleMenu);
     overlay.addEventListener("click", toggleMenu);
@@ -79,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             membersList.appendChild(memberDiv);
         });
     }
-    
+
     // Grid/List View Toggle
     function handleViewToggle(viewType) {
         const storedMembers = localStorage.getItem("members");
