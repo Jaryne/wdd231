@@ -105,22 +105,14 @@ nav a:hover {
 /* Breadcrumb Navigation */
 .breadcrumb {
     font-size: 25px;
-    margin-left: 20rem;
-    color: #a1a1a1;
+    margin: auto;
+    color: #d9d9d9;
 }
 
 .breadcrumb a {
     text-decoration: none;
-    color: #a1a1a1;
-    font-weight: normal;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumb span {
-    color: #a1a1a1;
+    color: #d9d9d9;
+    font-weight: lighter;
 }
 
 /* Hero Section */
