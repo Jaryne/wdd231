@@ -76,12 +76,12 @@ header {
     right: -200px;
     width: 200px;
     height: 100%;
-    transition: right 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     z-index: 1000;
 }
 
 #navMenu.slide-in {
-    right: 0;
+    transform: translateX(-100%);
 }
 
 #navMenu li {
@@ -96,49 +96,31 @@ header {
     padding: 10px;
 }
 
-/* Navigation Links */
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+nav a:hover {
+    background-color: #ffffff33;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-nav a {
-    color: white;
+/* Breadcrumb Navigation */
+.breadcrumb {
+    font-size: 25px;
+    margin-left: 20rem;
+    color: #a1a1a1;
+}
+
+.breadcrumb a {
     text-decoration: none;
-    padding: 5px 10px;
-    position: relative;
+    color: #a1a1a1;
+    font-weight: normal;
 }
 
-/* Navigation Dots */
-nav a .dot {
-    display: block;
-    width: 6px;
-    height: 6px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.breadcrumb a:hover {
+    text-decoration: underline;
 }
 
-nav a:hover .dot {
-    opacity: 1;
-}
-
-.active .dot {
-    width: 8px;
-    height: 8px;
-    background-color: #ffcc00;
-    bottom: 18px;
-    left: 110%;
-    opacity: 1;
+.breadcrumb span {
+    color: #a1a1a1;
 }
 
 /* Hero Section */
@@ -158,12 +140,12 @@ nav a:hover .dot {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #ffcc00;
-    border: none;
-    cursor: pointer;
+    color: #003366;
     font-weight: bold;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Main Content Styling */
@@ -228,51 +210,26 @@ h1 {
 /* Grid View */
 #members-list.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center; /* Centers the entire grid */
+    justify-content: center;
     padding: 10px;
 }
 
-/* Member Cards in Grid View */
 .member.grid {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers content in the card */
+    align-items: center;
     background-color: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centers text */
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.member.grid img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.member.grid h3 {
-    font-size: 1.2rem;
-    margin: 10px 0 5px;
-}
-
-.member.grid p {
-    font-size: 0.9rem;
-    margin: 2px 0;
-}
-
-.member.grid a {
-    font-size: 0.9rem;
-    color: #003366;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
 .member.grid:hover {
-    transform: scale(1.05); /* Adds hover effect */
+    transform: scale(1.05);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -291,30 +248,6 @@ h1 {
     border-bottom: 1px solid #ccc;
     background-color: #fff;
     border-radius: 5px;
-}
-
-.member.list img {
-    width: 60px;
-    height: auto;
-    border-radius: 3px;
-}
-
-.member.list h3 {
-    margin: 0;
-    font-size: 16px;
-    flex-grow: 1;
-}
-
-.member.list p, .member.list a {
-    margin: 0;
-    font-size: 14px;
-    flex-grow: 1;
-}
-
-.member.list a {
-    color: #003366;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 /* Footer */
