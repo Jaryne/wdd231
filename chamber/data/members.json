@@ -5,7 +5,7 @@
         "phone": "0920 974 5828",
         "website": "https://casparroofing.ph/",
         "image": "images/caspar-logo.webp",
-        "membership": 3
+        "membership": "Gold"
     },
     {
         "name": "Stone Depot",
@@ -13,7 +13,7 @@
         "phone": "(032) 272 4462",
         "website": "https://stonedepot.ph/",
         "image": "images/stone-depot.webp",
-        "membership": 2
+        "membership": "Silver"
     },
     {
         "name": "Eurotel Hotel Naga",
@@ -21,7 +21,7 @@
         "phone": "0918 637 7656",
         "website": "https://eurotel-hotel.com/",
         "image": "images/eurotel.jpg",
-        "membership": 1
+        "membership": "Member"
     },
     {
         "name": "Jollibee",
@@ -29,7 +29,7 @@
         "phone": "#8-700",
         "website": "https://www.jollibee.com.ph",
         "image": "images/jollibee-logo.webp",
-        "membership": 3
+        "membership": "Gold"
     },
     {
         "name": "SM Supermalls",
@@ -37,7 +37,7 @@
         "phone": "+63 2 8876 1111",
         "website": "https://www.smsupermalls.com",
         "image": "images/sm-supermalls.webp",
-        "membership": 2
+        "membership": "Silver"
     },
     {
         "name": "BDO Unibank",
@@ -45,7 +45,7 @@
         "phone": "+63 2 8631 8000",
         "website": "https://www.bdo.com.ph",
         "image": "images/bdo-unibank.webp",
-        "membership": 2
+        "membership": "Silver"
     },
     {
         "name": "Meralco",
@@ -53,6 +53,6 @@
         "phone": "+63 2 16211",
         "website": "https://www.meralco.com.ph",
         "image": "images/meralco-logo.webp",
-        "membership": 1
+        "membership": "Member"
     }
 ]

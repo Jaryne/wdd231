@@ -96,6 +96,10 @@ header {
     padding: 10px;
 }
 
+nav {
+    margin-left: auto;
+}
+
 nav a:hover {
     background-color: #ffffff33;
     border-radius: 5px;
@@ -103,10 +107,19 @@ nav a:hover {
 }
 
 /* Breadcrumb Navigation */
+.header-content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; /* Ensure vertical alignment */
+    justify-content: space-between; /* Keep them side by side */
+    gap: 10px; /* Adjust spacing */
+    max-width: 80%;
+}
+
 .breadcrumb {
-    font-size: 25px;
-    margin: auto;
+    font-size: 18px;
     color: #d9d9d9;
+    margin-left: 10px;
 }
 
 .breadcrumb a {
@@ -159,7 +172,7 @@ h1 {
 /* Info Sections */
 .info-sections {
     margin-bottom: 2rem;
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 1rem;
     text-align: center;
@@ -177,17 +190,21 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: -1rem;
-    margin-bottom: -1rem;
+    margin: -1rem 0;
 }
 
 .view-toggle button {
     padding: 10px 15px;
     background-color: #003366;
-    color: white;
+    color: #fff;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-toggle button:hover {
+    background-color: #005799;
 }
 
 /* Members Section */
@@ -200,7 +217,7 @@ h1 {
 }
 
 /* Grid View */
-#members-list.grid {
+#members-list.grid-view {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -212,7 +229,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: #fff;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -226,20 +243,25 @@ h1 {
 }
 
 /* List View */
-#members-list.list {
+#members-list.list-view {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    padding: 0;
 }
 
 .member.list {
     display: flex;
     align-items: center;
-    gap: 10px;
     padding: 15px;
     border-bottom: 1px solid #ccc;
     background-color: #fff;
     border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.member.list:hover {
+    background-color: #f0f0f0;
 }
 
 /* Footer */
