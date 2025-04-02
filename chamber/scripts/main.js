@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p>${member.membership}</p>
             <a href="${member.website}" target="_blank">Visit Website</a>
         `;
 

@@ -26,6 +26,7 @@
     <script src="scripts/date.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
 </head>
 
 <body>
@@ -78,17 +79,12 @@
             </div>
         </section>
 
-        <div class="view-toggle">
-            <button id="grid-view" aria-label="Switch to grid view">Grid</button>
-            <button id="list-view" aria-label="Switch to list view">List</button>
-        </div>
-
-        <section class="members-container">
+        <div id="spotlight-container">
             <h2>Company Spotlight</h2>
             <div id="members-list" class="grid-view">
                 <!-- members.json loads here -->
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
