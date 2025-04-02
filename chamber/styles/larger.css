@@ -137,6 +137,7 @@ nav a:hover {
 
 .hero img {
     width: 100%;
+    border-radius: 50px;
     max-height: 60vh;
     object-fit: cover;
 }
