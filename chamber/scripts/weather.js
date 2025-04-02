@@ -44,7 +44,7 @@ async function getCurrentWeather() {
 
 // Function to fetch and display weather forecast
 async function getWeatherForecast() {
-  const apiKey = '2f788eb3ff90c4f9d9ab131200250204';
+  const apiKey = 'f788eb3ff90c4f9d9ab131200250204';
   const city = 'Manila';
   const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3`;
 
