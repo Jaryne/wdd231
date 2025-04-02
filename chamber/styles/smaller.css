@@ -48,7 +48,7 @@
     }
 
     /* Grid View Styling */
-    #members-list.grid {
+    #members-list.grid-view {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
@@ -95,7 +95,7 @@
 
 
     /* List View for Larger Screens */
-    #members-list.list {
+    #members-list.list-view {
         display: flex;
         flex-direction: column;
         gap: 15px;
