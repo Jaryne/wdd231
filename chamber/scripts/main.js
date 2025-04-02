@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Gradually fade in
             }, 10);
-        } else {
+        }
+        
+        else {
             overlay.style.backgroundColor = "rgba(0, 0, 0, 0)"; // Fade out
             setTimeout(() => {
                 overlay.style.display = "none"; // Hide after fade
@@ -53,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const data = await response.json();
             membersData = data;
             localStorage.setItem("members", JSON.stringify(data)); // Store data for toggling
-            displayMembers(data, "grid"); // Default view
+            displayMembers(data, "grid");
         } catch (error) {
             console.error("Error fetching members:", error);
         }
@@ -61,22 +63,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Display members in the specified view type
     function displayMembers(members, viewType) {
-        membersList.innerHTML = ""; // Clear the list before adding new content
-
-        // Remove both grid-view and list classes before applying the new one
+        membersList.innerHTML = "";
         membersList.classList.remove("grid-view", "list");
-
-        // Add the appropriate class based on the viewType
         membersList.classList.add(viewType === "grid" ? "grid-view" : "list");
 
         members.forEach(member => {
             const memberDiv = document.createElement("div");
-            memberDiv.classList.add("member", viewType); // Add appropriate class for grid/list view
+            memberDiv.classList.add("member", viewType);
 
             let memberContent = `
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
+            <p>${member.membership}</p>
             <a href="${member.website}" target="_blank">Visit Website</a>
         `;
 
@@ -104,6 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
     gridViewBtn.addEventListener("click", () => handleViewToggle("grid"));
     listViewBtn.addEventListener("click", () => handleViewToggle("list"));
 
-    // Initialize by fetching members data
+    // Initialize
     fetchMembers();
 });

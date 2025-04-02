@@ -1,9 +1,9 @@
-// A helper function to fetch data and handle HTTP errors
+// helper function to fetch data and handle HTTP errors
 async function fetchData(url) {
     try {
       const response = await fetch(url);
   
-      // If the HTTP status is not OK, throw an error
+      // If the HTTP status is not ok, throw an error
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -11,14 +11,14 @@ async function fetchData(url) {
       return await response.json();
     } catch (error) {
       console.error("Error fetching data:", error);
-      throw error; // Re-throw to let the calling function handle the error.
+      throw error;
     }
   }
   
   // Function to fetch and display current weather
   async function getCurrentWeather() {
-    const apiKey = '26dd370543cd4502a3802905252503'; // Replace with your actual WeatherAPI key
-    const city = 'Manila';               // You can change this or get it dynamically
+    const apiKey = '26dd370543cd4502a3802905252503';
+    const city = 'Manila';
     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
   
     try {
@@ -36,15 +36,14 @@ async function fetchData(url) {
         <img src="${data.current.condition.icon}" alt="Weather Icon">
       `;
     } catch (error) {
-      // This catch is triggered when the fetchData fails (network error, CORS, etc.)
       document.getElementById('weather-info').innerHTML = `<p>Unable to fetch weather data.</p>`;
     }
   }
   
   // Function to fetch and display weather forecast
   async function getWeatherForecast() {
-    const apiKey = '26dd370543cd4502a3802905252503'; // Replace with your actual WeatherAPI key
-    const city = 'Manila';               // You can change this or make it dynamic
+    const apiKey = '26dd370543cd4502a3802905252503';
+    const city = 'Manila';
     const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3`;
   
     try {
@@ -74,7 +73,6 @@ async function fetchData(url) {
     }
   }
   
-  // Run the functions once the page is fully loaded
   document.addEventListener('DOMContentLoaded', () => {
     getCurrentWeather();
     getWeatherForecast();
