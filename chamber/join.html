@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join page contains the form, the membership cards, and modals.">
+    <meta name="author" content="Jaryne Manrique">
+    <title>Join | Philippine Chamber</title>
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Philippines Chamber Join Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jaryne.github.io/wdd231/chamber/images/rizal-monument.webp">
+    <meta property="og:url" content="https://jaryne.github.io/wdd231/chamber/join.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/rizal-monument.webp" type="image/x-icon">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Scripts -->
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/member.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/rizal-monument.webp" alt="Rizal Monument Chamber Logo">
+                <h2>Philippines Join Page</h2>
+            </div>
+
+            <nav class="breadcrumb">
+                <a href="index.html">Chamber</a> &gt;
+                <span>Join</span>
+            </nav>
+        </div>
+
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div id="overlay" onclick="toggleMenu()"></div> <!-- Overlay -->
+            <ul id="navMenu" class="slide-out">
+                <li><a href="index.html">Home<span class="dot"></span></a></li>
+                <li><a href="directory.html" class="dot">Directory<span class="dot"></span></a></li>
+                <li><a href="join.html">Join<span class="active"></span></a></li>
+                <li><a href="discover.html">Discover<span class="dot"></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <img src="images/sorsogon.jpg" alt="Scenic view of Sorsogon">
+        <button class="hero-button" aria-label="Buy tickets for the keynote event">Keynote Tickets</button>
+    </section>
+
+    <main>
+        <h1>Philippine Join Page</h1>
+        <!-- Form Section -->
+        <section class="form-section">
+            <form action="thankyou.html" method="get" id="join-form">
+                <!-- First Name -->
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required title="Enter your first name"
+                    autocomplete="given-name">
+
+                <!-- Last Name -->
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required title="Enter your last name"
+                    autocomplete="family-name">
+
+                <!-- Organizational Title -->
+                <label for="org-title">Organizational Title</label>
+                <input type="text" id="org-title" name="org-title" required title="Enter your organizational title"
+                    pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title">
+
+                <!-- Email Address -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required title="Enter your email address"
+                    autocomplete="email" placeholder="example@example.com">
+
+                <!-- Mobile Number -->
+                <label for="phone">Mobile Number</label>
+                <input type="tel" id="phone" name="phone" required title="Enter your mobile number" autocomplete="tel">
+
+                <!-- Business/Organization Name -->
+                <label for="business-name">Business Name</label>
+                <input type="text" id="business-name" name="business-name" required title="Enter your business name"
+                    autocomplete="organization">
+
+                <!-- Membership Level -->
+                <label for="membership-level">Membership Level</label>
+                <select id="membership-level" name="membership-level" required>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+
+                <!-- Business/Organization Description -->
+                <label for="description">Business Description</label>
+                <textarea id="description" name="description"
+                    title="Enter a description of your business or organization"></textarea>
+
+                <!-- Timestamp -->
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <!-- Membership Cards Section -->
+        <section class="membership-cards">
+            <div class="cards">
+                <div class="card" id="np-card">
+                    <h3>NP Membership</h3>
+                    <p>No fee</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#npModal">Learn More</a>
+                </div>
+                <div class="card" id="bronze-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Moderate Fee</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#bronzeModal">Learn More</a>
+                </div>
+                <div class="card" id="silver-card">
+                    <h3>Silver Membership</h3>
+                    <p>Higher Fee</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#silverModal">Learn More</a>
+                </div>
+                <div class="card" id="gold-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium Fee</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#goldModal">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals for Membership Levels -->
+        <div class="modal" id="npModal">
+            <div class="modal-content">
+                <h2>NP Membership Benefits</h2>
+                <p>Benefits: Nonprofit organization spotlight, event invitations, discounts on events.</p>
+                <button data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="bronzeModal">
+            <div class="modal-content">
+                <h2>Bronze Membership Benefits</h2>
+                <p>Benefits: Website listings, discounts on events, newsletter inclusion.</p>
+                <button data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="silverModal">
+            <div class="modal-content">
+                <h2>Silver Membership Benefits</h2>
+                <p>Benefits: Website spotlight, additional event discounts, social media promotions.</p>
+                <button data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <div class="modal" id="goldModal">
+            <div class="modal-content">
+                <h2>Gold Membership Benefits</h2>
+                <p>Benefits: Full event sponsorship, exclusive advertising opportunities, and more.</p>
+                <button data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jaryne Manrique. All rights reserved.</p>
+        <p id="lastModified"></p>
+        <div class="social-icons">
+            <a href="#" aria-label="Visit our Facebook page"><img src="images/facebook-icon.png"
+                    alt="Facebook icon"></a>
+            <a href="#" aria-label="Visit our Twitter profile"><img src="images/twitter-icon.png"
+                    alt="Twitter icon"></a>
+            <a href="#" aria-label="Visit our Instagram profile"><img src="images/instagram-icon.png"
+                    alt="Instagram icon"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -171,6 +171,87 @@ h1 {
     margin-bottom: 1rem;
 }
 
+/* v ONLY EDIT THIS SECTION - DONT TOUCH THE OTHERS FOR MY SANITY v */
+/* Form Section Styling - Enhanced */
+.form-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* More spacing between fields */
+}
+
+/* Labels */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #003366;
+}
+
+/* Input Fields */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+input:focus, textarea:focus, select:focus {
+    border-color: #005799;
+    box-shadow: 0 0 8px rgba(0, 87, 153, 0.3);
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #003366;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #005799;
+    transform: scale(1.05);
+}
+
+/* Business Description Field */
+textarea {
+    height: 140px;
+    resize: vertical; /* Resize only vertically */
+}
+
+/* Membership Level Selection */
+select {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .form-section {
+        width: 90%;
+    }
+}
+
+/* ^ END OF EDIT SECOTION ^ */
+
 /* Info Sections */
 .info-sections {
     margin-bottom: 2rem;
