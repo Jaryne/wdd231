@@ -10,6 +10,5 @@ lastModifiedElement.innerHTML = `Last Modified: ${lastModified.getDate().toStrin
 
 // time stamp
 window.onload = function() {
-    // Set the timestamp when the form is loaded
     document.getElementById('timestamp').value = new Date().toLocaleString();
 };
