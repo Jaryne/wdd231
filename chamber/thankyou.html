@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the 'thank you' page for submitting the form.">
+    <meta name="author" content="Jaryne Manrique">
+    <title> Thank You | Philippine Chamber</title>
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Philippines Chamber Thank You Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jaryne.github.io/wdd231/chamber/images/rizal-monument.webp">
+    <meta property="og:url" content="https://jaryne.github.io/wdd231/chamber/join.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/rizal-monument.webp" type="image/x-icon">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/modals.css">
+
+    <!-- Scripts -->
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/rizal-monument.webp" alt="Rizal Monument Chamber Logo">
+                <h2>Philippines Join Page</h2>
+            </div>
+
+            <nav class="breadcrumb">
+                <a href="index.html">Chamber</a> &gt;
+                <span>Thank You</span>
+            </nav>
+        </div>
+
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <div id="overlay" onclick="toggleMenu()"></div> <!-- Overlay -->
+            <ul id="navMenu" class="slide-out">
+                <li><a href="index.html">Home<span class="dot"></span></a></li>
+                <li><a href="directory.html" class="dot">Directory<span class="dot"></span></a></li>
+                <li><a href="join.html">Join<span class="dot"></span></a></li>
+                <li><a href="discover.html">Discover<span class="dot"></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="heading-1">
+            <h1>Thank You for Your Submission!</h1>
+            <p>We appreciate you taking the time to become a member. Below is the information you submitted:</p>
+        </div>
+
+        <section class="thank-you-details">
+            <h2>Submitted Information:</h2>
+            <p><strong>First Name:</strong> <span id="firstNameDisplay"></span></p>
+            <p><strong>Last Name:</strong> <span id="lastNameDisplay"></span></p>
+            <p><strong>Organizational Title:</strong> <span id="titleDisplay"></span></p>
+            <p><strong>Email Address:</strong> <span id="emailDisplay"></span></p>
+            <p><strong>Phone Number:</strong> <span id="phoneDisplay"></span></p>
+            <p><strong>Organization Name:</strong> <span id="orgNameDisplay"></span></p>
+            <p><strong>Membership Level:</strong> <span id="membershipDisplay"></span></p>
+            <p><strong>Organization Description:</strong> <span id="descriptionDisplay"></span></p>
+            <p><strong>Submission Date:</strong> <span id="timestampDisplay"></span></p>
+        </section>
+
+        <section class="thank-you-footer">
+            <p>For more information, visit our <a href="index.html">Chamber Homepage</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jaryne Manrique. All rights reserved.</p>
+        <p id="lastModified"></p>
+        <div class="social-icons">
+            <a href="#" aria-label="Visit our Facebook page"><img src="images/facebook-icon.png"
+                    alt="Facebook icon"></a>
+            <a href="#" aria-label="Visit our Twitter profile"><img src="images/twitter-icon.png"
+                    alt="Twitter icon"></a>
+            <a href="#" aria-label="Visit our Instagram profile"><img src="images/instagram-icon.png"
+                    alt="Instagram icon"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

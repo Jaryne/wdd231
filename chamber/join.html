@@ -22,11 +22,13 @@
     <link rel="stylesheet" href="styles/smaller.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/modals.css">
 
     <!-- Scripts -->
     <script src="scripts/date.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <script src="scripts/member.js" defer></script>
+    <script src="scripts/modals.js" defer></script>
 </head>
 
 <body>
@@ -60,38 +62,45 @@
             <h1>Become a Member</h1>
             <p>Join Philippines Chamber of Commerce to get updates on upcoming events and networking opportunities.</p>
         </div>
-        <form class="membership-form">
-            <label>First Name:
-                <input type="text" name="firstName">
+
+        <form class="membership-form" action="thankyou.html" method="get">
+            <label for="firstName">First Name:
+                <input type="text" name="firstName" required autocomplete="given-name">
             </label>
-            <label>Last Name:
-                <input type="text" name="lastName">
+
+            <label for="lastName">Last Name:
+                <input type="text" name="lastName" required autocomplete="family-name">
             </label>
-            <label>Organizational Title:
-                <input type="text" name="title">
+
+            <label for="title">Organizational Title:
+                <input type="text" id="title" name="title" required pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title">
             </label>
-            <label>Email Address:
-                <input type="email" name="email" placeholder="company@domain.com">
+
+            <label for="email">Email Address:
+                <input type="email" id="email" name="email" required placeholder="company@domain.com" autocomplete="email">
             </label>
-            <label>Phone Number:
-                <input type="tel" name="phone">
+
+            <label for="phone">Phone Number:
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
             </label>
-            <label>Organization Name:
-                <input type="text" name="orgName">
+
+            <label for="orgName">Organization Name:
+                <input type="text" id="orgName" name="orgName" required autocomplete="organization">
             </label>
 
             <fieldset>
                 <legend>Select Membership Level</legend>
-                <label><input type="radio" name="membership" value="NP"> NP Membership</label>
-                <label><input type="radio" name="membership" value="Bronze"> Bronze Membership</label>
-                <label><input type="radio" name="membership" value="Silver"> Silver Membership</label>
-                <label><input type="radio" name="membership" value="Gold"> Gold Membership</label>
+                <label for="np-membership"><input type="radio" id="np-membership" name="membership" value="NP" required>NP Membership</label>
+                <label for="bronze-membership"><input type="radio" id="bronze-membership" name="membership" value="Bronze">Bronze Membership</label>
+                <label for="silver-membership"><input type="radio" id="silver-membership" name="membership" value="Silver">Silver Membership</label>
+                <label for="gold-membership"><input type="radio" id="gold-membership" name="membership" value="Gold">Gold Membership</label>
             </fieldset>
 
-            <label>Organization Description:
-                <textarea name="description" rows="4"></textarea>
+            <label for="description">Organization Description:
+                <textarea id="description" name="description" rows="4"></textarea>
             </label>
 
+            <input type="hidden" id="timestamp" name="timestamp" value=""> <!-- hidden stamp -->
             <button type="submit">Submit</button>
         </form>
 
@@ -99,12 +108,79 @@
             <h2>Membership Levels</h2>
             <p>Learn more about each membership level and their benefits</p>
 
-            <div class="level-card">NP Membership<button>Learn More</button></div>
-            <div class="level-card">Bronze Membership<button>Learn More</button></div>
-            <div class="level-card">Silver Membership<button>Learn More</button></div>
-            <div class="level-card">Gold Membership<button>Learn More</button></div>
+            <div class="level-card" id="np-card">
+                <h3>NP Membership</h3>
+                <p>No fee</p>
+                <button onclick="openModal('npModal')">Learn More</button>
+            </div>
+
+            <div class="level-card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <p>Low cost</p>
+                <button onclick="openModal('bronzeModal')">Learn More</button>
+            </div>
+
+            <div class="level-card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <p>Mid-tier cost</p>
+                <button onclick="openModal('silverModal')">Learn More</button>
+            </div>
+
+            <div class="level-card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <p>Premium benefits</p>
+                <button onclick="openModal('goldModal')">Learn More</button>
+            </div>
         </aside>
     </main>
+
+    <!-- Modals -->
+    <div id="npModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('npModal')">&times;</span>
+            <h4>NP Membership Benefits</h4>
+            <ul>
+                <li>Access to special events</li>
+                <li>Networking opportunities</li>
+                <li>Discounts on services</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bronzeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+            <h4>Bronze Membership Benefits</h4>
+            <ul>
+                <li>Access to basic events</li>
+                <li>Discounted rates on services</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="silverModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('silverModal')">&times;</span>
+            <h4>Silver Membership Benefits</h4>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Exclusive event invitations</li>
+                <li>Priority access to special offers</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="goldModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('goldModal')">&times;</span>
+            <h4>Gold Membership Benefits</h4>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Spotlight advertising on the homepage</li>
+                <li>VIP event access</li>
+            </ul>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; <span id="currentyear"></span> Jaryne Manrique. All rights reserved.</p>
