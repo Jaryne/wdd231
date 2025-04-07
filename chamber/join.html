@@ -65,28 +65,28 @@
 
         <form class="membership-form" action="thankyou.html" method="get">
             <label for="firstName">First Name:
-                <input type="text" name="firstName" required autocomplete="given-name">
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
             </label>
-
+            
             <label for="lastName">Last Name:
-                <input type="text" name="lastName" required autocomplete="family-name">
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
             </label>
-
+            
             <label for="title">Organizational Title:
-                <input type="text" id="title" name="title" required pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title">
+                <input type="text" id="title" name="title" required autocomplete="organization-title">
             </label>
-
+            
             <label for="email">Email Address:
-                <input type="email" id="email" name="email" required placeholder="company@domain.com" autocomplete="email">
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="company@domain.com">
             </label>
-
+            
             <label for="phone">Phone Number:
                 <input type="tel" id="phone" name="phone" required autocomplete="tel">
             </label>
-
+            
             <label for="orgName">Organization Name:
                 <input type="text" id="orgName" name="orgName" required autocomplete="organization">
-            </label>
+            </label>            
 
             <fieldset>
                 <legend>Select Membership Level</legend>
