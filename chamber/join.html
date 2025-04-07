@@ -63,29 +63,29 @@
             <p>Join Philippines Chamber of Commerce to get updates on upcoming events and networking opportunities.</p>
         </div>
 
-        <form class="membership-form" action="thankyou.html" method="get">
+        <form class="membership-form" action="thankyou.html" method="get" onsubmit="return validateForm()">
             <label for="firstName">First Name:
-                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
-            </label>
+                <input type="text" id="firstName" name="firstName" title="Enter your first name" required autocomplete="given-name">
+            </label>            
             
             <label for="lastName">Last Name:
-                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                <input type="text" id="lastName" name="lastName" title="Enter your last name" required autocomplete="family-name">
             </label>
             
             <label for="title">Organizational Title:
-                <input type="text" id="title" name="title" required autocomplete="organization-title">
-            </label>
+                <input type="text" id="title" name="title" title="Enter at least 7 characters using only letters, hyphens, and spaces" required pattern="[A-Za-z\s-]{7,}">
+            </label>            
             
             <label for="email">Email Address:
-                <input type="email" id="email" name="email" required autocomplete="email" placeholder="company@domain.com">
-            </label>
+                <input type="email" id="email" name="email" title="Enter your email address" required autocomplete="email" placeholder="youremail@email.com">
+            </label>            
             
             <label for="phone">Phone Number:
-                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                <input type="tel" id="phone" name="phone" title="Enter your phone number" required autocomplete="tel">
             </label>
             
             <label for="orgName">Organization Name:
-                <input type="text" id="orgName" name="orgName" required autocomplete="organization">
+                <input type="text" id="orgName" name="orgName" title="Enter your organization name" required autocomplete="organization">
             </label>            
 
             <fieldset>
