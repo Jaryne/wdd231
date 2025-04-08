@@ -18,20 +18,25 @@ window.onload = function() {
 document.addEventListener("DOMContentLoaded", function() {
     const lastVisitMessage = document.getElementById("last-visit-message");
 
-    if (lastVisitMessage) {
-        const lastVisit = localStorage.getItem("lastVisit");
+    if (!lastVisitMessage) return;
 
-        if (lastVisit) {
-            lastVisitMessage.textContent = `Your last visit was on ${lastVisit}`;
+    const lastVisit = localStorage.getItem("lastVisit");
+    const now = Date.now();
+
+    if (!lastVisit) {
+        lastVisitMessage.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        const timeDifference = now - parseInt(lastVisit, 10);
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        if (daysDifference < 1) {
+            lastVisitMessage.textContent = "Back so soon! Awesome!";
         } else {
-            lastVisitMessage.textContent = "Welcome! Let us know if you have any questions.";
+            const dayWord = daysDifference === 1 ? "day" : "days";
+            lastVisitMessage.textContent = `You last visited ${daysDifference} ${dayWord} ago.`;
         }
-
-        // Add fade-in effect
-        setTimeout(() => {
-            lastVisitMessage.style.opacity = "1";
-        }, 300);
-        
-        localStorage.setItem("lastVisit", new Date().toLocaleString());
     }
+
+    // store current timestamp for future visits
+    localStorage.setItem("lastVisit", now);
 });
