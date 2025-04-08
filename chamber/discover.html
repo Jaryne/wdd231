@@ -21,11 +21,12 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/smaller.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
 
     <!-- Scripts -->
     <script src="scripts/date.js" defer></script>
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/member.js" defer></script>
+    <script src="scripts/items.js" defer></script>
 </head>
 
 <body>
@@ -47,9 +48,9 @@
             <div id="overlay" onclick="toggleMenu()"></div> <!-- Overlay -->
             <ul id="navMenu" class="slide-out">
                 <li><a href="index.html">Home<span class="dot"></span></a></li>
-                <li><a href="directory.html" class="active">Directory<span class="dot"></span></a></li>
+                <li><a href="directory.html" class="dot">Directory<span class="dot"></span></a></li>
                 <li><a href="join.html">Join<span class="dot"></span></a></li>
-                <li><a href="discover.html">Discover<span class="dot"></span></a></li>
+                <li><a href="discover.html">Discover<span class="active"></span></a></li>
             </ul>
         </nav>        
     </header>
@@ -62,12 +63,17 @@
 
     <main>
         <h1>Discover | Philippine Chamber</h1>
+        <section class="cards-grid">
+            <!-- Cards will be dynamically inserted here -->
+        </section>
 
-        
-    </main>
+        <aside class="sidebar">
+            <p id="last-visit-message"></p>
+        </aside>        
+    </main>    
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Jaryne Manrique. All rights reserved.</p>
+        <p>&copy; <span id="currentyear"></span> Jaryne Manrique All rights reserved</p>
         <p id="lastModified"></p>
         <div class="social-icons">
             <a href="#" aria-label="Visit our Facebook page"><img src="images/facebook-icon.png"

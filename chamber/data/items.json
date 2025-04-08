@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Rizal Park",
+        "address": "Roxas Blvd, Ermita, Manila",
+        "description": "A historical urban park in the heart of Manila, dedicated to the Philippine national hero, Dr. Jose Rizal.",
+        "image": "images/rizal-park.webp"
+    },
+    {
+        "name": "Chocolate Hills",
+        "address": "Bohol, Philippines",
+        "description": "A geological formation located in Bohol, consisting of at least 1,268 hills, known for their distinctive brown color during the dry season.",
+        "image": "images/chocolate-hills.webp"
+    },
+    {
+        "name": "Intramuros",
+        "address": "Manila, Philippines",
+        "description": "The historic walled area within Manila, known for its rich Spanish colonial architecture and landmarks like Fort Santiago.",
+        "image": "images/intramuros.webp"
+    },
+    {
+        "name": "Taal Volcano",
+        "address": "Taal, Batangas",
+        "description": "An active stratovolcano located in Batangas, with a picturesque crater lake and scenic views from the surrounding areas.",
+        "image": "images/taal-volcano.webp"
+    },
+    {
+        "name": "Puerto Princesa Underground River",
+        "address": "Sabang, Puerto Princesa, Palawan",
+        "description": "A UNESCO World Heritage Site and one of the New 7 Wonders of Nature, the underground river is a natural wonder of stalactites and stalagmites.",
+        "image": "images/puerto-princesa.webp"
+    },
+    {
+        "name": "Dawis Beach",
+        "address": "Digos, Davao del Sur",
+        "description": "A beautiful beach known for its bioluminescent algae, which creates a magical glow in the water at night.",
+        "image": "images/dawis-beach.webp"
+    },
+    {
+        "name": "Pagsanjan Falls",
+        "address": "Pagsanjan, Laguna",
+        "description": "A majestic waterfall located in Laguna, famous for the thrilling boat ride that takes visitors directly to the falls.",
+        "image": "images/pagsanjan-falls.webp"
+    },
+    {
+        "name": "Vigan",
+        "address": "Vigan, Ilocos Sur",
+        "description": "A UNESCO World Heritage Site known for its preserved Spanish colonial architecture and cobblestone streets.",
+        "image": "images/vigan.webp"
+    }
+]
