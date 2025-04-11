@@ -1,0 +1,164 @@
+:root {
+    /* Fonts */
+    --font-display: 'Playfair Display', serif;
+    --font-serif: 'Cormorant Garamond', serif;
+
+    /* Colors */
+    --color-bg: #121212;
+    --color-text: #c8c8c8;
+    --color-white: #fff;
+    --color-black: #000;
+
+    /* Overlay */
+    --overlay-color: rgba(0, 0, 0, 0.4);
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+
+    /* Typography */
+    --letter-spacing: 1px;
+    --font-size-base: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-heading: 5rem;
+
+    /* Z-index layers */
+    --z-nav: 3;
+    --z-overlay: 2;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-display);
+    color: var(--color-text);
+    background: var(--color-bg);
+    overflow-x: hidden;
+}
+
+.hero {
+    background-image: url("../images/versailles.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100vh;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+}
+
+.hero-text {
+    grid-column: 3 / span 2;
+    align-self: center;
+    z-index: var(--z-overlay);
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: var(--font-size-heading);
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.exhibition-title,
+.exhibition-dates {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-base);
+    letter-spacing: var(--letter-spacing);
+    margin-top: var(--space-md);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: var(--z-nav);
+    background: var(--overlay-color);
+}
+
+.logo h1 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-base);
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: var(--space-xs) var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    animation: slideIn 0.7s ease-in-out;
+}
+
+.nav ul {
+    display: flex;
+    gap: var(--space-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    font-family: var(--font-serif);
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    letter-spacing: var(--letter-spacing);
+    transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav a:hover {
+    color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.header-controls {
+    position: relative;
+}
+
+#counter-display {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-bg);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+footer .socials {
+    position: absolute;
+    left: var(--space-sm);
+    bottom: var(--space-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    z-index: 1;
+}
+
+footer .socials a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: var(--font-size-small);
+}
