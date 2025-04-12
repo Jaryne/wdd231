@@ -78,36 +78,36 @@ body {
     margin-top: var(--space-md);
 }
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--space-sm) var(--space-md);
     position: fixed;
     width: 100%;
+    height: 60px;
+    overflow: hidden;
     top: 0;
     z-index: var(--z-nav);
-    background: var(--overlay-color);
+    background: var(--overlay-color); /* remove */
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
 }
 
 .logo h1 {
-    display: flex;
-    align-items: center;
-    font-size: var(--font-size-base);
-    background: var(--color-white);
-    color: var(--color-black);
-    padding: var(--space-xs) var(--space-sm);
-    text-transform: uppercase;
-    letter-spacing: var(--letter-spacing);
+    display: none;
 }
 
-.nav {
+nav {
     display: flex;
     align-items: center;
     animation: slideIn 0.7s ease-in-out;
 }
 
-.nav ul {
+nav ul {
     display: flex;
     gap: var(--space-md);
     list-style: none;
@@ -115,7 +115,7 @@ body {
     padding: 0;
 }
 
-.nav a {
+nav a {
     font-family: var(--font-serif);
     font-size: var(--font-size-base);
     color: var(--color-white);
@@ -125,21 +125,28 @@ body {
     transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.nav a:hover {
+nav a:hover {
     color: var(--color-accent);
     transform: scale(1.05);
 }
 
+.active {
+    font-weight: bold;
+    color: #ff5733;
+    text-decoration: none;
+}
+
 .header-controls {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #counter-display {
     display: none;
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed;
+    transform: translateX(-60%);
     background-color: var(--color-bg);
     padding: 5px;
     border-radius: 5px;
@@ -157,8 +164,6 @@ footer .socials {
     z-index: 1;
 }
 
-footer .socials a {
-    color: var(--color-white);
-    text-decoration: none;
-    font-size: var(--font-size-small);
+footer .socials img {
+    width: 20px;
 }
