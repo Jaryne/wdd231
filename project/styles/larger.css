@@ -154,7 +154,7 @@ nav a:hover {
     white-space: nowrap;
 }
 
-footer .socials {
+.socials {
     position: absolute;
     left: var(--space-sm);
     bottom: var(--space-sm);
@@ -163,7 +163,19 @@ footer .socials {
     gap: var(--space-xs);
     z-index: 1;
 }
+/* In styles/music.css */
 
-footer .socials img {
-    width: 20px;
+.socials a {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Slight brightness increase */
+}
+
+.socials img {
+    width: 30px; /* Adjust size */
+    height: 30px;
 }

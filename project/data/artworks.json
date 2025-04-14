@@ -1,0 +1,38 @@
+[
+    {
+        "title": "The Last Supper",
+        "artist": "Leonardo da Vinci",
+        "medium": "Tempera on Gesso",
+        "image": "images/The_Last_Supper_-_Leonardo_Da_Vinci.jpg"
+    },
+    {
+        "title": "The Annunciation",
+        "artist": "Fra Angelico",
+        "medium": "Tempera on panel",
+        "image": "images/Angelico_-_Annunciation.jpg"
+    },
+    {
+        "title": "The Crucifixion",
+        "artist": "Peter Paul Rubens",
+        "medium": "Oil on canvas",
+        "image": "images/Peter_Paul_Rubens_-_Christ_on_the_Cross.jpg"
+    },
+    {
+        "title": "Madonna and Child",
+        "artist": "Raphael",
+        "medium": "Oil on panel",
+        "image": "images/madonna-and-child.jpg"
+    },
+    {
+        "title": "Christ the Redeemer",
+        "artist": "Paul Landowski",
+        "medium": "Concrete and soapstone",
+        "image": "images/Christ_the_Redeemer_-_Cristo_Redentor.jpg"
+    },
+    {
+        "title": "The Two Crowns",
+        "artist": "Sir Frank Dicksee",
+        "medium": "Oil on canvas",
+        "image": "https://i.pinimg.com/736x/f7/ce/a3/f7cea3c9af1b9013d5e7d46acec1c2c7.jpg"
+    }
+]
