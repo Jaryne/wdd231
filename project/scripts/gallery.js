@@ -2,7 +2,7 @@ let artworks = [];
 let currentIndex = 0;
 
 async function loadArtworks() {
-  const res = await fetch('artworks.json');
+  const res = await fetch('data/artworks.json');
   artworks = await res.json();
   displayArtwork(currentIndex);
 }
@@ -27,3 +27,16 @@ document.getElementById('next-btn').addEventListener('click', () => {
 });
 
 window.addEventListener('DOMContentLoaded', loadArtworks);
+
+function displayArtwork(index) {
+  const art = artworks[index];
+  console.log("Attempting to display image:", art.image);
+
+  const img = document.getElementById('art-img');
+  img.src = art.image;
+  img.alt = art.title;
+
+  document.getElementById('art-title').textContent = art.title;
+  document.getElementById('art-year').textContent = `${art.artist} — ${art.medium}`;
+  document.getElementById('art-description').textContent = `A masterpiece by ${art.artist}.`;
+}
