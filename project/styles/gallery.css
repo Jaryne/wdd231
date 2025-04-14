@@ -1,0 +1,44 @@
+.gallery {
+  margin-top: 100vh;
+  /* push it below hero section */
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--color-bg);
+  z-index: 1;
+  position: relative;
+}
+
+.gallery-nav {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.art-display {
+  max-width: 600px;
+  text-align: center;
+}
+
+.art-display img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.art-info {
+  margin-top: 1rem;
+}
+
+.art-info h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+}

@@ -9,3 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function displayArtwork(index) {
+    const art = artworks[index];
+    console.log('Displaying artwork:', art); // ← log what’s loading
+  
+    const img = document.getElementById('art-img');
+    img.src = art.image;
+    img.alt = art.title;
+  
+    document.getElementById('art-title').textContent = art.title;
+    document.getElementById('art-year').textContent = art.year;
+    document.getElementById('art-description').textContent = art.description;
+  }
+  
