@@ -5,8 +5,9 @@
   justify-content: center;
   gap: 1rem;
   padding: 2rem;
-  background: #f5f0e6;
-  border-top: 1px solid #ccc;
+  background: transparent; /* Keeps the gallery transparent to show the background */
+  z-index: 3; /* Ensures the gallery stays above the blurred background */
+  position: relative; /* To allow stacking above the blur */
 }
 
 .gallery-nav {
@@ -31,13 +32,19 @@
 .art-display img {
   width: 100%;
   height: auto;
-  border: 3px solid #ddd;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 3px solid #c8c8c8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow on hover */
+}
+
+.art-display img:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
 }
 
 .art-info {
   padding: 1rem;
   font-family: 'Cormorant Garamond', serif;
+  color: #c8c8cc; /* Adjusted text color to fit the theme */
 }
 
 .art-info h3 {
@@ -48,5 +55,4 @@
 .art-info p {
   margin: 0.2rem 0;
   font-size: 1rem;
-  color: #666;
 }

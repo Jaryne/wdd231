@@ -15,7 +15,9 @@
   <meta property="og:url" content="https://MEEE.github.io/wdd231/project/heavensdoor.html">
 
   <!-- Fonts and Icon -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="images/hd-icon.png" type="image/x-icon">
 
   <!-- Stylesheets -->
@@ -25,6 +27,7 @@
   <link rel="stylesheet" href="styles/music.css">
   <link rel="stylesheet" href="styles/gallery.css">
   <link rel="stylesheet" href="styles/hallofframe.css">
+  <link rel="stylesheet" href="styles/network.css">
 
   <!-- Scripts -->
   <script src="scripts/main.js" defer></script>
@@ -32,6 +35,7 @@
   <script src="scripts/visitor.js" defer></script>
   <script src="scripts/gallery.js" defer></script>
   <script src="scripts/hallofframe.js" defer></script>
+  <script src="scripts/network.js" defer></script>
 </head>
 
 <body>
@@ -51,7 +55,9 @@
     <div class="header-controls">
       <!-- Music Player -->
       <button id="music-toggle" class="music-btn">|||</button>
-      <iframe id="spotify-player" style="display: none;" src="https://open.spotify.com/embed/playlist/1UKfq4kJNWFFNYF548JkOn?utm_source=generator" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+      <iframe id="spotify-player" style="display: none;"
+        src="https://open.spotify.com/embed/playlist/1UKfq4kJNWFFNYF548JkOn?utm_source=generator" width="400"
+        height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
 
       <!-- Visitor Counter -->
       <a id="visitor-counter">O</a>
@@ -60,18 +66,12 @@
   </header>
 
   <main>
+    <!-- Directory -->
     <h1>Hall of Frame</h1>
-    <p>Curated works</p>
+    <p>Masterpieces from across centuries of skill and talent</p>
 
-    <!-- Filters -->
-    <div class="filters">
-      <select id="artistFilter">
-        <option value="">All Artists</option>
-      </select>
-      <select id="yearFilter">
-        <option value="">All Years</option>
-      </select>
-    </div>
+    <input type="text" id="search" placeholder="Search by title or artist...">
+    <div id="results"></div>
 
     <!-- Gallery -->
     <div id="hall-gallery"></div>

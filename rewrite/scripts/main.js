@@ -28,3 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// handle scroll event and apply blur effect
+window.addEventListener('scroll', function () {
+  const body = document.body; // Target the body element
+
+  // Check if the scroll position is more than 100px
+  if (window.scrollY > 300) {
+    body.classList.add('blur'); // Add the 'blur' class when scrolled down
+  } else {
+    body.classList.remove('blur'); // Remove the 'blur' class when at the top
+  }
+});
+

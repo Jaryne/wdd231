@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="styles/smaller.css">
   <link rel="stylesheet" href="styles/larger.css">
   <link rel="stylesheet" href="styles/music.css">
-  <link rel="stylesheet" href="styles/network.css"> <!-- Added network.css -->
+  <link rel="stylesheet" href="styles/form.css"> <!-- Added network.css -->
 
   <!-- Scripts -->
   <script src="scripts/main.js" defer></script>
@@ -62,17 +62,82 @@
     </div>
   </header>
 
-  <main>
-    <!-- Directory -->
-    <h1>The Network</h1>
-    <p>Explore artwork by our community and submit your own below.</p>
+  <main class="container">
+    <div class="heading">
+        <h1>Suggestion box</h1>
+        <p>Email us</p>
+    </div>
 
-    <input type="text" id="search" placeholder="Search by title or artist...">
+    <form class="membership-form" action="thankyou.html" method="get" onsubmit="return validateForm()">
+        <label for="firstName">First Name:
+            <input type="text" id="firstName" name="firstName" title="Enter your first name" required autocomplete="given-name">
+        </label>            
+        
+        <label for="lastName">Last Name:
+            <input type="text" id="lastName" name="lastName" title="Enter your last name" required autocomplete="family-name">
+        </label>
+        
+        <label for="title">Organizational Title:
+            <input type="text" id="title" name="title" title="Enter at least 7 characters using only letters, hyphens, and spaces" required pattern="[A-Za-z\s-]{7,}">
+        </label>            
+        
+        <label for="email">Email Address:
+            <input type="email" id="email" name="email" title="Enter your email address" required autocomplete="email" placeholder="youremail@email.com">
+        </label>            
+        
+        <label for="phone">Phone Number:
+            <input type="tel" id="phone" name="phone" title="Enter your phone number" required autocomplete="tel">
+        </label>
+        
+        <label for="orgName">Organization Name:
+            <input type="text" id="orgName" name="orgName" title="Enter your organization name" required autocomplete="organization">
+        </label>            
 
-    <div id="results"></div>
+        <fieldset>
+            <legend>Select Membership Level</legend>
+            <label for="np-membership"><input type="radio" id="np-membership" name="membership" value="NP" required>NP Membership</label>
+            <label for="bronze-membership"><input type="radio" id="bronze-membership" name="membership" value="Bronze">Bronze Membership</label>
+            <label for="silver-membership"><input type="radio" id="silver-membership" name="membership" value="Silver">Silver Membership</label>
+            <label for="gold-membership"><input type="radio" id="gold-membership" name="membership" value="Gold">Gold Membership</label>
+        </fieldset>
 
-    <hr>
-  </main>
+        <label for="description">Organization Description:
+            <textarea id="description" name="description" rows="4"></textarea>
+        </label>
+
+        <input type="hidden" id="timestamp" name="timestamp" value=""> <!-- hidden stamp -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <aside class="membership-info">
+        <h2>Membership Levels</h2>
+        <p>Learn more about each membership level and their benefits</p>
+
+        <div class="level-card" id="np-card">
+            <h3>NP Membership</h3>
+            <p>No fee</p>
+            <button onclick="openModal('npModal')">Learn More</button>
+        </div>
+
+        <div class="level-card" id="bronze-card">
+            <h3>Bronze Membership</h3>
+            <p>Low cost</p>
+            <button onclick="openModal('bronzeModal')">Learn More</button>
+        </div>
+
+        <div class="level-card" id="silver-card">
+            <h3>Silver Membership</h3>
+            <p>Mid-tier cost</p>
+            <button onclick="openModal('silverModal')">Learn More</button>
+        </div>
+
+        <div class="level-card" id="gold-card">
+            <h3>Gold Membership</h3>
+            <p>Premium benefits</p>
+            <button onclick="openModal('goldModal')">Learn More</button>
+        </div>
+    </aside>
+</main>
 
   <footer>
     <div class="socials">
