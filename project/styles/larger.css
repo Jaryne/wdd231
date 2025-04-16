@@ -28,6 +28,10 @@
     --z-overlay: 2;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: var(--font-display);
@@ -89,7 +93,8 @@ header {
     overflow: hidden;
     top: 0;
     z-index: var(--z-nav);
-    background: var(--overlay-color); /* remove */
+    background: var(--overlay-color);
+    /* remove */
 }
 
 .logo img {
@@ -163,6 +168,7 @@ nav a:hover {
     gap: var(--space-xs);
     z-index: 1;
 }
+
 /* In styles/music.css */
 
 .socials a {
@@ -172,10 +178,12 @@ nav a:hover {
 
 .socials a:hover {
     transform: scale(1.1);
-    filter: brightness(1.2); /* Slight brightness increase */
+    filter: brightness(1.2);
+    /* Slight brightness increase */
 }
 
 .socials img {
-    width: 30px; /* Adjust size */
+    width: 30px;
+    /* Adjust size */
     height: 30px;
 }

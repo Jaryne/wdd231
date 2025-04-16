@@ -1,0 +1,52 @@
+/* === GALLERY STYLING === */
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: #f5f0e6;
+  border-top: 1px solid #ccc;
+}
+
+.gallery-nav {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  transition: transform 0.2s ease;
+}
+
+.gallery-nav:hover {
+  transform: scale(1.2);
+  color: #222;
+}
+
+.art-display {
+  max-width: 600px;
+  text-align: center;
+}
+
+.art-display img {
+  width: 100%;
+  height: auto;
+  border: 3px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.art-info {
+  padding: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.art-info h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+}
+
+.art-info p {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  color: #666;
+}

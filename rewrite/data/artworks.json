@@ -1,0 +1,32 @@
+{
+    "artworks": [
+        {
+            "title": "The Last Supper",
+            "artist": "Leonardo da Vinci",
+            "year": "1495-1498",
+            "description": "table",
+            "image": "images/the-last-supper.webp"
+        },
+        {
+            "title": "The Annunciation",
+            "artist": "Fra Angelico",
+            "year": "1432-1434",
+            "description": "angel and person",
+            "image": "images/annunciation.webp"
+        },
+        {
+            "title": "Madonna and Child",
+            "artist": "Raphael",
+            "year": "1503-1505",
+            "description": "baby Jesus and Mary",
+            "image": "images/madonna-and-child.webp"
+        },
+        {
+            "title": "Christ the Redeemer",
+            "artist": "Paul Landowski",
+            "year": "1922 & 1931",
+            "description": "big statue",
+            "image": "images/cristo-redentor.webp"
+        }
+    ]
+}

@@ -1,6 +1,5 @@
 .gallery {
   margin-top: 100vh;
-  /* push it below hero section */
   padding: var(--space-md);
   display: flex;
   align-items: center;
@@ -32,10 +31,19 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
 .art-info {
   margin-top: 1rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.art-display img.show,
+.art-info.show {
+  opacity: 1;
 }
 
 .art-info h3 {
