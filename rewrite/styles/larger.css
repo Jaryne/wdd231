@@ -247,13 +247,13 @@ footer {
 }
 
 .divider {
-  color: #8795a1;
+  color: var(--color-text);
   font-size: 12px;
 }
 
 .copyright {
   font-size: 12px;
-  color: #8795a1;
+  color: var(--color-text);
   text-transform: uppercase;
   margin: 0;
 }
