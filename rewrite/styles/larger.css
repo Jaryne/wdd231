@@ -63,6 +63,19 @@ main {
   z-index: 1;
 }
 
+.artists-main,
+.hall-main,
+.container {
+  margin-top: 5rem;
+}
+
+.artists-main h1,
+#artist-list {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -89,7 +102,7 @@ main {
 
 .hero-text h2 {
   font-size: var(--font-size-heading);
-  font-weight: var(--font-size-small);
+  font-weight: 100;
   line-height: .7;
   text-transform: uppercase;
   margin: 0;

@@ -27,6 +27,30 @@
             "year": "1922 & 1931",
             "description": "big statue",
             "image": "images/cristo-redentor.webp"
+        },
+        {
+            "title": "Juan de Pareja",
+            "artist": "Diego Velázquez",
+            "year": "1650",
+            "image": "images/Retrato_de_Juan_Pareja,_by_Diego_Velázquez.jpg"
+        },
+        {
+            "title": "The Storm",
+            "artist": "Pierre-Auguste Cot",
+            "year": "1880",
+            "image": "images/1880_Pierre_Auguste_Cot_-_The_Storm.jpg"
+        },
+        {
+            "title": "The Harvesters",
+            "artist": "Pieter Bruegel the Elder",
+            "year": "1565",
+            "image": "images/Pieter_Bruegel_the_Elder-_The_Harvesters.jpg"
+        },
+        {
+            "title": "Self-Portrait",
+            "artist": "Vincent van Gogh",
+            "year": "1887",
+            "image": "images/-Vincent_van_Gogh_-_Self-Portrait.jpg"
         }
     ]
 }

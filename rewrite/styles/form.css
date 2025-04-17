@@ -1,66 +1,26 @@
 .heading {
     text-align: center;
     width: 100%;
-    margin-bottom: 2rem;
+    margin: 2rem 0 -8rem;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 2rem;
-    margin-top: 5rem;
-    flex-wrap: wrap;
-}
-
-.membership-form {
-    min-width: 400px;
+.suggestion-form {
     max-width: 700px;
-    margin-bottom: 2rem;
+    margin: 7rem auto 2rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     gap: 1rem;
-    text-align: start;
+    padding: 1rem;
 }
 
-.membership-form fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    font-weight: bold;
-    border-radius: 7px;
-    padding: 1rem 2rem;
-}
-
-.membership-form fieldset label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: normal;
-    padding: 0.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.membership-form input[type="radio"] {
-    margin: 0;
-    accent-color: #005799;
-    width: 18px;
-    height: 18px;
-}
-
-.membership-form>label {
+.suggestion-form > label {
     display: flex;
     flex-direction: column;
     font-weight: bold;
 }
 
-.membership-form input,
-.membership-form textarea {
+.suggestion-form input,
+.suggestion-form textarea {
     padding: 0.6rem;
     border: 2px solid #ccc;
     border-radius: 6px;
@@ -68,17 +28,17 @@
     resize: vertical;
 }
 
-.membership-form input:focus,
-.membership-form textarea:focus {
-    border-color: #005799;
+.suggestion-form input:focus,
+.suggestion-form textarea:focus {
+    border-color: #ff5733;
     outline: none;
-    box-shadow: 0 0 5px #002e7866;
+    box-shadow: 0 0 5px #c8c8c8;
 }
 
-.membership-form button {
+.suggestion-form button {
     width: 100%;
     padding: 0.8rem;
-    background-color: #003366;
+    background-color: #121212;
     color: white;
     border: none;
     border-radius: 6px;
@@ -87,74 +47,6 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-.membership-form button:hover {
-    background-color: #005799;
-}
-
-.membership-info {
-    background-color: #d8d8d8;
-    padding: 1.5rem;
-    border: #ccc;
-    border-radius: 8px;
-    height: fit-content;
-}
-
-.membership-info h2 {
-    background-color: #003366;
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
-    margin-top: 0;
-    border-radius: 4px;
-}
-
-.level-card {
-    background-color: #003366;
-    color: white;
-    margin: 1rem 0;
-    padding: 0.75rem;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    opacity: 0;
-    transform: scale(0.9);
-    animation: slideScale 1s ease-out forwards;
-}
-
-/* staggered animation delays for each membership card */
-#np-card {
-    animation-delay: 0.2s;
-}
-
-#bronze-card {
-    animation-delay: 0.4s;
-}
-
-#silver-card {
-    animation-delay: 0.6s;
-}
-
-#gold-card {
-    animation-delay: 0.8s;
-}
-
-@keyframes slideScale {
-    0% { transform: translateY(20px) scale(0.9); opacity: 0; }
-    100% { transform: translateY(0) scale(1); opacity: 1; }
-}
-
-.level-card button {
-    background-color: white;
-    color: #003366;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.level-card button:hover {
-    background-color: #cacaca;
+.suggestion-form button:hover {
+    background-color: #ff5733;
 }
