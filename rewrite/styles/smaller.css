@@ -1,0 +1,106 @@
+:root {
+    --font-display: 'Playfair Display', serif;
+    --font-serif: 'Cormorant Garamond', serif;
+
+    --color-bg: #121212;
+    --color-text: #c8c8c8;
+    --color-link: #8795a1;
+    --color-accent: #ff5733;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --overlay-color: rgba(0, 0, 0, 0.5);
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+
+    --letter-spacing: 1px;
+    --font-size-base: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-heading: 3rem;
+
+    --z-nav: 3;
+    --z-overlay: 2;
+}
+
+body {
+    background-size: cover;
+    background-attachment: scroll;
+    padding-top: 80px;
+}
+
+header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: var(--space-xs);
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav {
+    width: 100%;
+    justify-content: center;
+}
+
+nav ul {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: center;
+}
+
+nav a {
+    font-size: var(--font-size-small);
+    padding: var(--space-xs) 0;
+}
+
+.header-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    margin-top: var(--space-sm);
+}
+
+#spotify-player {
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+}
+
+main.container {
+    padding: var(--space-sm);
+}
+
+.hero-text h2 {
+    font-size: var(--font-size-heading);
+}
+
+.exhibition-title {
+    font-size: var(--font-size-small);
+}
+
+footer {
+    flex-direction: column;
+    padding: var(--space-sm);
+    text-align: center;
+}
+
+.footer-links {
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.socials {
+    flex-direction: row;
+    position: static;
+    justify-content: center;
+    margin-top: var(--space-sm);
+}
+
+.socials img {
+    width: 25px;
+    height: 25px;
+}
