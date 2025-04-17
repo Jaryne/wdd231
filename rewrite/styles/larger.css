@@ -12,7 +12,7 @@
   --color-black: #000;
 
   /* Overlay */
-  --overlay-color: rgba(0, 0, 0, 0.4);
+  --overlay-color: rgba(0, 0, 0, 0.3);
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -38,7 +38,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: var(--font-display);
-  background-image: linear-gradient(to bottom, var(--overlay-color), rgba(0, 0, 0, 0.5)), url("../images/versailles.webp");
+  background-image: linear-gradient(to top, var(--overlay-color), rgba(0, 0, 0, 0.5)), url("../images/versailles.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
