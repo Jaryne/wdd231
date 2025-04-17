@@ -23,7 +23,7 @@
   --letter-spacing: 1px;
   --font-size-base: 1rem;
   --font-size-small: 0.875rem;
-  --font-size-heading: 5rem;
+  --font-size-heading: 7rem;
 
   /* Z-index layers */
   --z-nav: 3;
@@ -110,7 +110,7 @@ header {
   padding: var(--space-sm) var(--space-md);
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 80px;
   overflow: hidden;
   top: 0;
   z-index: var(--z-nav);
