@@ -7,6 +7,7 @@
   --color-bg: #121212;
   --color-text: #c8c8c8;
   --color-link: #8795a1;
+  --color-accent: #ff5733;
   --color-white: #fff;
   --color-black: #000;
 
@@ -150,13 +151,13 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-link);
   transform: scale(1.05);
 }
 
 .active {
   font-weight: bold;
-  color: #ff5733;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -239,12 +240,12 @@ footer {
 .footer-link {
   font-size: 12px;
   color: var(--color-link);
-  text-decoration: none;
   text-transform: uppercase;
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--color-accent);
 }
 
 .divider {
