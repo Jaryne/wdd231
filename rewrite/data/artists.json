@@ -13,12 +13,12 @@
         {
             "name": "Fra Angelico",
             "bio": "A Dominican friar and early Italian painter whose works reflect deep religious devotion and early Renaissance style.",
-            "image": "images/fra_angelico_portrait.jpg"
+            "image": "images/fra-angelico-portrait.jpg"
         },
         {
             "name": "Raphael",
             "bio": "One of the great masters of the High Renaissance, known for his serene Madonnas and balanced compositions.",
-            "image": "images/raffaello_sanzio.webp"
+            "image": "images/raffaello-sanzio.webp"
         },
         {
             "name": "Antonio Ciseri",
@@ -28,17 +28,17 @@
         {
             "name": "Caravaggio",
             "bio": "Baroque master famous for dramatic use of light and realism in biblical scenes like 'Supper at Emmaus.'",
-            "image": "images/bild-ottavio_leoni_caravaggio.webp"
+            "image": "images/bild-ottavio-leoni-caravaggio.webp"
         },
         {
             "name": "Harry Anderson",
             "bio": "American illustrator known for Christ-centered works commissioned by religious institutions.",
-            "image": "images/harry_in_studio_2_small.webp"
+            "image": "images/harry-in-studio-2-small.webp"
         },
         {
             "name": "William-Adolphe Bouguereau",
             "bio": "French academic painter celebrated for classical technique and tender religious imagery like 'L'Innocence.'",
-            "image": "images/self_portrait,_by_william_bouguereau.webp"
+            "image": "images/self-portrait-by-william-bouguereau.webp"
         },
         {
             "name": "Carl Heinrich Bloch",
@@ -48,7 +48,7 @@
         {
             "name": "Rembrandt",
             "bio": "Dutch Golden Age painter, known for emotional intensity and masterful use of light in religious works like 'The Storm on the Sea of Galilee.'",
-            "image": "images/rembrandt_van_rijn_-_self-portrait.webp"
+            "image": "images/rembrandt-van-rijn-self-portrait.webp"
         },
         {
             "name": "Del Parson",

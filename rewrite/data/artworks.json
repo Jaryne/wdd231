@@ -5,84 +5,84 @@
             "artist": "Leonardo da Vinci",
             "year": "1495-1498",
             "description": "Depicts Jesus' final meal with His apostles, capturing the moment He announces one will betray Him.",
-            "image": "rewrite/images/the-last-supper.webp"
+            "image": "images/the-last-supper.webp"
         },
         {
             "title": "Adam and Eve",
             "artist": "Lowell Bruce Bennet",
             "year": "20th century",
             "description": "A symbolic portrayal of Adam and Eve, capturing the pivotal moment of humanity's fall in the Garden of Eden. The composition reflects classical influences while inviting reflection on choice, temptation, and consequence.",
-            "image": "rewrite/images/adam-eve.webp"
+            "image": "images/adam-eve.webp"
         },
         {
             "title": "The Annunciation",
             "artist": "Fra Angelico",
             "year": "1432-1434",
             "description": "Illustrates the Archangel Gabriel delivering the news of Christ's conception to the Virgin Mary.",
-            "image": "rewrite/images/annunciation.webp"
+            "image": "images/annunciation.webp"
         },
         {
             "title": "Madonna and Child",
             "artist": "Raphael",
             "year": "1503-1505",
             "description": "Romantic portrayal of the Virgin Mary tenderly holding the infant Jesus against a serene backdrop.",
-            "image": "rewrite/images/madonna-and-child.webp"
+            "image": "images/madonna-and-child.webp"
         },
         {
             "title": "Ecce Homo",
             "artist": "Antonio Ciseri",
             "year": "1871",
             "description": "The painting has as its subject the Gospel episode of the presentation of Jesus to the people of Jerusalem after the scourging. The author focuses on the moment in which the Roman prefect Pontius Pilate, in charge of judging Jesus, points to the latter to the crowd by pronouncing the words 'Ecce Homo', 'Behold the man'.",
-            "image": "rewrite/images/antonio-ciseri-ecce-homo.webp"
+            "image": "images/antonio-ciseri-ecce-homo.webp"
         },
         {
             "title": "Supper at Emmaus",
             "artist": "Caravaggio",
             "year": "1601",
             "description": "Depicting the moment when the resurrected but incognito Jesus reveals himself to two of his disciples (presumed to be Luke and Cleopas) in the town of Emmaus, only to soon vanish from their sight (Gospel of Luke 24: 30-31).",
-            "image": "rewrite/images/caravaggio-supper-at-emmaus-national-gallery-london.webp"
+            "image": "images/caravaggio-supper-at-emmaus-national-gallery-london.webp"
         },
         {
             "title": "John Baptizing Jesus",
             "artist": "Harry Anderson",
             "year": "20th century",
             "description": "Depicts the moment John the Baptist baptizes Jesus in the Jordan River.",
-            "image": "rewrite/images/john-baptizes-christ.webp"
+            "image": "images/john-baptizes-christ.webp"
         },
         {
             "title": "L'Innocence",
             "artist": "William-Adolphe Bouguereau",
             "year": "1893",
             "description": "The painting signifies the future sacrifice of Jesus. It is viewed as the perfect gift for an expectant mother, where she can hang in the nursery or a present to a woman who has already given birth to celebrate her newborn.",
-            "image": "rewrite/images/bouguereau-linnocence.webp"
+            "image": "images/bouguereau-linnocence.webp"
         },
         {
             "title": "Christ Healing the Sick",
             "artist": "Carl Heinrich Bloch",
             "year": "1883",
             "description": "Christ Healing the Sick at the Pool of Bethesda portrays Christ both as a healer and a comforter.",
-            "image": "rewrite/images/pool-of-bethesda-carl-bloch.webp"
+            "image": "images/pool-of-bethesda-carl-bloch.webp"
         },
         {
             "title": "The Storm on the Sea of Galilee",
             "artist": "Rembrandt",
             "year": "1633",
             "description": "The Storm on the Sea of Galilee is the only seascape ever painted by Rembrandt. It depicts Jesus calming the waves of the sea, saving the lives of the fourteen men aboard the vessel. Of these fourteen men, it is said Rembrandt included a self portrait of himself in the boat, next to Jesus and his twelve disciples.",
-            "image": "rewrite/images/rembrandt-christ-in-the-storm-on-the-lake-of-galilee.webp"
+            "image": "images/rembrandt-christ-in-the-storm-on-the-lake-of-galilee.webp"
         },
         {
             "title": "The Second Coming",
             "artist": "Harry Anderson",
             "year": "1963",
             "description": "The resurrected Jesus Christ (wearing white robes with a magenta sash) standing above a large gathering of clouds. Christ has His arms partially extended. The wounds in the hands of Christ are visible. Numerous angels (each blowing a trumpet) are gathered on both sides of Christ. A desert landscape is visible below the clouds. The painting depicts the Second coming of Christ (Acts 1:11).",
-            "image": "rewrite/images/the-second-coming.webp"
+            "image": "images/the-second-coming.webp"
         },
         {
             "title": "The Lord Appears in the Kirtland Temple",
             "artist": "Del Parson",
             "year": "1836",
             "description": "The Lord Jehovah appears in glory and accepts the Kirtland Temple as His house; Moses and Elias each appear and commit their keys and dispensations; Elijah returns and commits the keys of his dispensation as promised by Malachi.",
-            "image": "rewrite/images/christ-appearing-smith_cowdery-parson.jpeg"
+            "image": "images/christ-appearing-smith_cowdery-parson.jpeg"
         }
     ]
 }
