@@ -76,6 +76,13 @@
             "year": "1963",
             "description": "The resurrected Jesus Christ (wearing white robes with a magenta sash) standing above a large gathering of clouds. Christ has His arms partially extended. The wounds in the hands of Christ are visible. Numerous angels (each blowing a trumpet) are gathered on both sides of Christ. A desert landscape is visible below the clouds. The painting depicts the Second coming of Christ (Acts 1:11).",
             "image": "images/the_second_coming.webp"
+        },
+        {
+            "title": "The Lord Appears in the Kirtland Temple",
+            "artist": "Del Parson",
+            "year": "1836",
+            "description": "The Lord Jehovah appears in glory and accepts the Kirtland Temple as His house; Moses and Elias each appear and commit their keys and dispensations; Elijah returns and commits the keys of his dispensation as promised by Malachi.",
+            "image": "images/christ_appearing_smith_cowdery_parson.jpeg"
         }
     ]
 }
