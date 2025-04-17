@@ -1,0 +1,56 @@
+/* Container layout */
+#artist-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Artist Card */
+.artist-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect */
+.artist-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Image panel */
+.artist-image {
+    width: 40%;
+    min-height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Info panel */
+.artist-info {
+    width: 60%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #f0f0f0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.artist-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.6rem;
+}
+
+.artist-info p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}

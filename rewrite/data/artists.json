@@ -1,0 +1,59 @@
+{
+    "artists": [
+        {
+            "name": "Leonardo da Vinci",
+            "bio": "Italian Renaissance polymath known for iconic works like 'The Last Supper' and 'Mona Lisa.' His art explores anatomy, light, and religious symbolism.",
+            "image": "images/leonardo-da-vinci.webp"
+        },
+        {
+            "name": "Lowell Bruce Bennet",
+            "bio": "20th-century artist celebrated for spiritual themes and symbolic religious representations like 'Adam and Eve.'",
+            "image": "images/lowell-bruce-bennett.webp"
+        },
+        {
+            "name": "Fra Angelico",
+            "bio": "A Dominican friar and early Italian painter whose works reflect deep religious devotion and early Renaissance style.",
+            "image": "images/fra_angelico_portrait.jpg"
+        },
+        {
+            "name": "Raphael",
+            "bio": "One of the great masters of the High Renaissance, known for his serene Madonnas and balanced compositions.",
+            "image": "images/raffaello_sanzio.webp"
+        },
+        {
+            "name": "Antonio Ciseri",
+            "bio": "Italian-Swiss painter noted for detailed religious scenes like 'Ecce Homo,' often filled with emotional tension.",
+            "image": "images/self-portrait-antonio-ciseri.webp"
+        },
+        {
+            "name": "Caravaggio",
+            "bio": "Baroque master famous for dramatic use of light and realism in biblical scenes like 'Supper at Emmaus.'",
+            "image": "images/bild-ottavio_leoni_caravaggio.webp"
+        },
+        {
+            "name": "Harry Anderson",
+            "bio": "American illustrator known for Christ-centered works commissioned by religious institutions.",
+            "image": "images/harry_in_studio_2_small.webp"
+        },
+        {
+            "name": "William-Adolphe Bouguereau",
+            "bio": "French academic painter celebrated for classical technique and tender religious imagery like 'L'Innocence.'",
+            "image": "images/self_portrait,_by_william_bouguereau.webp"
+        },
+        {
+            "name": "Carl Heinrich Bloch",
+            "bio": "Danish painter whose reverent portrayals of Christ have become beloved across Christian communities.",
+            "image": "images/carl-bloch.jpg"
+        },
+        {
+            "name": "Rembrandt",
+            "bio": "Dutch Golden Age painter, known for emotional intensity and masterful use of light in religious works like 'The Storm on the Sea of Galilee.'",
+            "image": "images/rembrandt_van_rijn_-_self-portrait.webp"
+        },
+        {
+            "name": "Del Parson",
+            "bio": "Delwin Oliver 'Del Parson' (born 1948) is an American painter who is well known for his Latter-day Saint -themed paintings. His painting of Jesus, 'Christ in Red Robe,' is recognizable from its wide use by the Church of Jesus Christ of Latter-day Saints.",
+            "image": "images/del_parson.jpg"
+        }
+    ]
+}
