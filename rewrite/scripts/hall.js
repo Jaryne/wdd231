@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function render(query = "") {
     results.innerHTML = "";
+
     data.artworks
       .filter(
         (a) =>
@@ -20,16 +21,24 @@ document.addEventListener("DOMContentLoaded", async () => {
         card.innerHTML = `
           <div class="art-card-blur-overlay"></div>
           <div class="art-card-content">
-            <img src="${art.image}" alt="${art.title}" class="art-image">
+            <img 
+              src="${art.image}" 
+              alt="${art.title}" 
+              class="art-image lazy-fade" 
+              loading="lazy"
+            >
             <h3>${art.title}</h3>
             <p><strong>${art.artist}</strong></p>
             <p>${art.description}</p>
           </div>
         `;
+
         results.appendChild(card);
       });
   }
+
   render();
+
   searchInput.addEventListener("input", () => {
     render(searchInput.value);
   });
