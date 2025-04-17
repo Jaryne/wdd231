@@ -221,6 +221,7 @@ footer {
 .footer-link:hover {
   text-decoration: none;
   color: var(--color-accent);
+  transition: color 0.2s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .divider {
@@ -234,6 +235,7 @@ footer {
   text-transform: uppercase;
   margin: 0;
 }
+
 .socials {
   position: fixed;
   right: var(--space-sm);
