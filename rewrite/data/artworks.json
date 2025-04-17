@@ -12,7 +12,7 @@
             "artist": "Lowell Bruce Bennet",
             "year": "20th century",
             "description": "A symbolic portrayal of Adam and Eve, capturing the pivotal moment of humanity's fall in the Garden of Eden. The composition reflects classical influences while inviting reflection on choice, temptation, and consequence.",
-            "image": "images/adam_eve.jpeg"
+            "image": "images/adam_eve.webp"
         },
         {
             "title": "The Annunciation",
@@ -33,14 +33,14 @@
             "artist": "Antonio Ciseri",
             "year": "1871",
             "description": "The painting has as its subject the Gospel episode of the presentation of Jesus to the people of Jerusalem after the scourging. The author focuses on the moment in which the Roman prefect Pontius Pilate, in charge of judging Jesus, points to the latter to the crowd by pronouncing the words 'Ecce Homo', 'Behold the man'.",
-            "image": "images/Antonio_Ciseri_-_Ecce_Homo.jpg"
+            "image": "images/Antonio_Ciseri_-_Ecce_Homo.webp"
         },
         {
             "title": "Supper at Emmaus",
             "artist": "Caravaggio",
             "year": "1601",
             "description": "Depicting the moment when the resurrected but incognito Jesus reveals himself to two of his disciples (presumed to be Luke and Cleopas) in the town of Emmaus, only to soon vanish from their sight (Gospel of Luke 24: 30-31).",
-            "image": "images/Caravaggio_Supper_at_Emmaus_National_Gallery,_London.jpg"
+            "image": "images/Caravaggio_Supper_at_Emmaus_National_Gallery,_London.webp"
         },
         {
             "title": "John Baptizing Jesus",
@@ -54,7 +54,7 @@
             "artist": "William-Adolphe Bouguereau",
             "year": "1893",
             "description": "The painting signifies the future sacrifice of Jesus. It is viewed as the perfect gift for an expectant mother, where she can hang in the nursery or a present to a woman who has already given birth to celebrate her newborn.",
-            "image": "images/Bouguereau-Linnocence.jpg"
+            "image": "images/Bouguereau-Linnocence.webp"
         },
         {
             "title": "Christ Healing the Sick",
@@ -68,7 +68,7 @@
             "artist": "Rembrandt",
             "year": "1633",
             "description": "The Storm on the Sea of Galilee is the only seascape ever painted by Rembrandt. It depicts Jesus calming the waves of the sea, saving the lives of the fourteen men aboard the vessel. Of these fourteen men, it is said Rembrandt included a self portrait of himself in the boat, next to Jesus and his twelve disciples.",
-            "image": "images/Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.jpg"
+            "image": "images/Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.webp"
         },
         {
             "title": "The Second Coming",
