@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Heaven's Door Gallery">
-  <meta name="author" content="MEEE">
+  <meta name="description" content="Explore Heaven's Door Painting Gallery">
+  <meta name="author" content="Jaryne Manrique">
   <title>Home | Heaven's Door</title>
 
   <!-- Open Graph tags -->
   <meta property="og:title" content="Heaven's Door Homepage">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://MEEE.github.io/wdd231/project/images/hd-logo.png">
-  <meta property="og:url" content="https://MEEE.github.io/wdd231/project/heavensdoor.html">
+  <meta property="og:image" content="https://jaryne.github.io/wdd231/project/images/hd-logo.png">
+  <meta property="og:url" content="https://jaryne.github.io/wdd231/project/heavensdoor.html">
 
   <!-- Fonts and Icon -->
   <link
@@ -50,10 +50,11 @@
     <div class="header-controls">
       <!-- Music Player -->
       <button id="music-toggle" class="music-btn">|||</button>
-      <iframe id="spotify-player" style="display: none;"
+      <iframe id="spotify-player" style="display: none; border: none; background: transparent;"
         src="https://open.spotify.com/embed/playlist/1UKfq4kJNWFFNYF548JkOn?utm_source=generator" width="400"
-        height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy">
+        height="80" allow="encrypted-media" loading="lazy">
       </iframe>
+
 
       <!-- Visitor Counter -->
       <a id="visitor-counter">O</a>
@@ -75,7 +76,7 @@
       <div class="art-display" id="art-display">
         <img id="art-img" src="images" alt="Artwork">
         <div class="art-info">
-          <h3 id="art-title"></h3>
+          <h3 id="art-title" class="visually-hidden">Title</h3>
           <p id="art-year"></p>
           <p id="art-description"></p>
         </div>

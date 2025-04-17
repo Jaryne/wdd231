@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Have suggestions? ideas? tell us about it! This network page is just for that.">
-  <meta name="author" content="MEEE">
+  <meta name="author" content="Jaryne Manrique">
   <title>Network | Heaven's Door</title>
 
   <!-- Open Graph tags -->
   <meta property="og:title" content="Heaven's Door Network Page">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://MEEE.github.io/wdd231/project/images/hd-logo.png">
-  <meta property="og:url" content="https://MEEE.github.io/wdd231/project/heavensdoor.html">
+  <meta property="og:image" content="https://jaryne.github.io/wdd231/project/images/hd-logo.png">
+  <meta property="og:url" content="https://jaryne.github.io/wdd231/project/heavensdoor.html">
 
   <!-- Fonts and Icon -->
   <link
@@ -26,10 +26,11 @@
   <link rel="stylesheet" href="styles/larger.css">
   <link rel="stylesheet" href="styles/music.css">
   <link rel="stylesheet" href="styles/form.css">
-  
+
   <!-- Scripts -->
   <script src="scripts/main.js" defer></script>
   <script src="scripts/network.js" defer></script>
+  <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -49,9 +50,9 @@
     <div class="header-controls">
       <!-- Music Player -->
       <button id="music-toggle" class="music-btn">|||</button>
-      <iframe id="spotify-player" style="display: none;"
+      <iframe id="spotify-player" style="display: none; border: none; background: transparent;"
         src="https://open.spotify.com/embed/playlist/1UKfq4kJNWFFNYF548JkOn?utm_source=generator" width="400"
-        height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy">
+        height="80" allow="encrypted-media" loading="lazy">
       </iframe>
 
       <!-- Visitor Counter -->
@@ -66,26 +67,27 @@
       <p>Email us</p>
     </div>
 
-    <form class="suggestion-form" action="onit.html" method="post">
+    <form class="suggestion-form" action="onit.html" method="get" onsubmit="return validateForm()">
       <label for="firstName">First Name:
         <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
       </label>
-    
+
       <label for="lastName">Last Name:
         <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
       </label>
-    
+
       <label for="email">Email Address:
         <input type="email" id="email" name="email" required autocomplete="email" placeholder="username@email.com">
       </label>
-    
+
       <label for="suggestion">Art Submission or Suggestion:
-        <textarea id="suggestion" name="suggestion" rows="5" required placeholder="Describe the artwork or idea..."></textarea>
+        <textarea id="suggestion" name="suggestion" rows="5" required
+          placeholder="Describe the artwork or idea..."></textarea>
       </label>
 
       <button id="text-submit" type="submit">Send Suggestion</button>
     </form>
-    
+
   </main>
 
   <footer>
