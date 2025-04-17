@@ -41,3 +41,36 @@ window.addEventListener('scroll', function () {
   }
 });
 
+document.getElementById("music-toggle").addEventListener("click", function () {
+  let spotifyPlayer = document.getElementById("spotify-player");
+
+  if (spotifyPlayer.style.display === "none") {
+    spotifyPlayer.style.display = "block";
+  } else {
+    spotifyPlayer.style.display = "none";
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let visitorCount = localStorage.getItem("visitorCount") || 0;
+  visitorCount++;
+  localStorage.setItem("visitorCount", visitorCount);
+
+  const hoverElement = document.getElementById("visitor-counter");
+  const counterDisplay = document.getElementById("counter-display");
+
+  hoverElement.addEventListener("mouseenter", function () {
+    counterDisplay.textContent = "Visitors: " + visitorCount;
+    counterDisplay.style.display = "inline";
+  });
+
+  hoverElement.addEventListener("mouseleave", function () {
+    counterDisplay.style.display = "none";
+  });
+});
+
+// js/data.js
+async function loadJSON(url) {
+  const res = await fetch(url);
+  return await res.json();
+}  
