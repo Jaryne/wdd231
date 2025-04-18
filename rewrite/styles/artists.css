@@ -4,6 +4,7 @@
     align-items: center;
     padding: 7rem;
 }
+
 /* Container layout */
 #artist-list {
     display: grid;
@@ -59,4 +60,79 @@
     margin: 0;
     font-size: 1rem;
     line-height: 1.6;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: rgba(30, 30, 30, 0.9);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.close {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff5c5c;
+}
+
+#modalArtistImage {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#modalArtistName {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+#modalArtistBio {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#modalArtistInfo {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 300;
 }

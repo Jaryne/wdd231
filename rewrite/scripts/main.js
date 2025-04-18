@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // handle scroll event and apply blur effect
 window.addEventListener('scroll', function () {
-  const body = document.body; // Target the body element
+  const body = document.body; // target the body element
 
   if (window.scrollY > 300) {
     body.classList.add('blur'); // 'blur' class when scrolled down
@@ -51,7 +51,7 @@ document.getElementById("music-toggle").addEventListener("click", function () {
   }
 });
 
-// Initialize visitor counter
+// initialize visitor counter
 document.addEventListener("DOMContentLoaded", function () {
-  initializeVisitorCounter("visitor-counter", "counter-display");  // Pass the IDs for the elements
+  initializeVisitorCounter("visitor-counter", "counter-display");
 });

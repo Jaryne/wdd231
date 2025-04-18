@@ -98,14 +98,13 @@ hr {
 }
 
 .lazy-fade[loading="lazy"] {
-  opacity: 0; /* Initial state */
+  opacity: 0; /* initial state */
 }
 
 .lazy-fade:not([loading="lazy"]) {
-  opacity: 1; /* After it loads */
+  opacity: 1; /* after load */
 }
 
-/* Optional: force the fade after load */
 .art-image {
   animation: fadeIn 0.6s ease-in forwards;
 }

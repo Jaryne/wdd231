@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Brief description of Heaven's Door Featured Artists">
-  <meta name="author" content="Jaryne Manrique">
+  <meta name="author" content="MEEE">
   <title>Artists | Heaven's Door</title>
 
   <!-- Open Graph tags -->
   <meta property="og:title" content="Heaven's Door Artists Page">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://jaryne.github.io/wdd231/project/images/hd-logo.png">
-  <meta property="og:url" content="https://jaryne.github.io/wdd231/project/heavensdoor.html">
+  <meta property="og:image" content="https://MEEE.github.io/wdd231/project/images/hd-logo.png">
+  <meta property="og:url" content="https://MEEE.github.io/wdd231/project/heavensdoor.html">
 
   <!-- Fonts and Icon -->
   <link
@@ -31,7 +31,6 @@
   <script type="module" src="scripts/main.js"></script>
   <script src="scripts/visitorcounter.js" defer></script>
   <script src="scripts/artists.js" defer></script>
-
 </head>
 
 <body>
@@ -66,6 +65,17 @@
     <h1>The Artists</h1>
     <div id="artist-list"></div>
   </main>
+
+  <!-- Modal Structure -->
+  <div id="artistModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalArtistImage" src="" alt="Artist Image" style="width: 100%; max-width: 200px; margin-bottom: 20px;">
+      <h2 id="modalArtistName"></h2>
+      <p id="modalArtistBio"></p>
+      <p id="modalArtistInfo"></p>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-left">

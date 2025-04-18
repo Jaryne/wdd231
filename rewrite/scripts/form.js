@@ -4,7 +4,6 @@ function validateForm() {
     const email = document.getElementById("email").value.trim();
     const suggestion = document.getElementById("suggestion").value.trim();
 
-    // Example validation: nothing too crazy, just some basic checks
     if (firstName.length < 2) {
         alert("First name must be at least 2 characters long.");
         return false;
@@ -15,7 +14,6 @@ function validateForm() {
         return false;
     }
 
-    // Email regex – simple and clean
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         alert("Please enter a valid email address.");

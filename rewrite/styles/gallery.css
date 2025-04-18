@@ -1,13 +1,12 @@
-/* === GALLERY STYLING === */
 .gallery {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   padding: 2rem;
-  background: transparent; /* Keeps the gallery transparent to show the background */
-  z-index: 3; /* Ensures the gallery stays above the blurred background */
-  position: relative; /* To allow stacking above the blur */
+  background: transparent;
+  z-index: 3;
+  position: relative;
 }
 
 .gallery-nav {
@@ -34,17 +33,17 @@
   height: auto;
   border: 3px solid #c8c8c8;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease; /* Smooth transition for shadow on hover */
+  transition: box-shadow 0.3s ease;
 }
 
 .art-display img:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .art-info {
   padding: 1rem;
   font-family: 'Cormorant Garamond', serif;
-  color: #c8c8cc; /* Adjusted text color to fit the theme */
+  color: #c8c8cc;
 }
 
 .art-info h3 {
