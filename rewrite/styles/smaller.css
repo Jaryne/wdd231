@@ -1,106 +1,128 @@
-:root {
-    --font-display: 'Playfair Display', serif;
-    --font-serif: 'Cormorant Garamond', serif;
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
 
-    --color-bg: #121212;
-    --color-text: #c8c8c8;
-    --color-link: #8795a1;
-    --color-accent: #ff5733;
-    --color-white: #ffffff;
-    --color-black: #000000;
+    /* Artists Section */
+    .artists-main {
+        padding: 2rem;
+        display: block;
+        /* Stacked layout */
+    }
 
-    --overlay-color: rgba(0, 0, 0, 0.5);
+    #artist-list {
+        display: block;
+        padding: 1rem;
+    }
 
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 2rem;
+    .artist-card {
+        display: block;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
 
-    --letter-spacing: 1px;
-    --font-size-base: 1rem;
-    --font-size-small: 0.875rem;
-    --font-size-heading: 3rem;
+    .artist-image {
+        width: 100%;
+        min-height: 200px;
+    }
 
-    --z-nav: 3;
-    --z-overlay: 2;
+    .artist-info {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: block;
+        height: 60vh;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    /* Socials */
+    .socials {
+        bottom: 20%;
+        /* Move social icons */
+    }
 }
 
-body {
-    background-size: cover;
-    background-attachment: scroll;
-    padding-top: 80px;
+/* Tablet Styles (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .artists-main {
+        padding: 3rem;
+    }
+
+    #artist-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 1.5rem;
+    }
+
+    .artist-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artist-image {
+        width: 100%;
+        min-height: 220px;
+    }
+
+    .artist-info {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 50vh;
+        display: block;
+    }
+
+    .hero-text h2 {
+        font-size: 3.5rem;
+    }
+
+    /* Socials */
+    .socials {
+        bottom: 15%;
+        /* Socials adjustment */
+    }
 }
 
-header {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-    padding: var(--space-xs);
-}
+/* Small Desktop Styles (1024px to 1200px) */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .artists-main {
+        padding: 4rem;
+    }
 
-.logo img {
-    width: 100px;
-}
+    #artist-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 2rem;
+    }
 
-nav {
-    width: 100%;
-    justify-content: center;
-}
+    .artist-card {
+        display: flex;
+        flex-direction: column;
+    }
 
-nav ul {
-    flex-direction: column;
-    gap: var(--space-xs);
-    align-items: center;
-}
+    .artist-image {
+        width: 100%;
+        min-height: 240px;
+    }
 
-nav a {
-    font-size: var(--font-size-small);
-    padding: var(--space-xs) 0;
-}
+    .artist-info {
+        width: 100%;
+        padding: 1rem;
+    }
 
-.header-controls {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-xs);
-    margin-top: var(--space-sm);
-}
+    /* Hero Section */
+    .hero {
+        height: 50vh;
+        display: block;
+    }
 
-#spotify-player {
-    width: 100%;
-    max-width: 100%;
-    height: 80px;
-}
-
-main.container {
-    padding: var(--space-sm);
-}
-
-.hero-text h2 {
-    font-size: var(--font-size-heading);
-}
-
-.exhibition-title {
-    font-size: var(--font-size-small);
-}
-
-footer {
-    flex-direction: column;
-    padding: var(--space-sm);
-    text-align: center;
-}
-
-.footer-links {
-    flex-direction: column;
-    gap: var(--space-xs);
-}
-
-.socials {
-    flex-direction: row;
-    position: static;
-    justify-content: center;
-    margin-top: var(--space-sm);
-}
-
-.socials img {
-    width: 25px;
-    height: 25px;
+    .hero-text h2 {
+        font-size: 5rem;
+    }
 }
