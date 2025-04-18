@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const data = await response.json();
   const container = document.getElementById('featured-art');
 
-  // Display 3 random featured artworks
+  // display 3 random featured artworks
   const featured = data.artworks.sort(() => 0.5 - Math.random()).slice(0, 3);
   featured.forEach((art) => {
     const card = document.createElement('div');
@@ -33,11 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener('scroll', function () {
   const body = document.body; // Target the body element
 
-  // Check if the scroll position is more than 100px
   if (window.scrollY > 300) {
-    body.classList.add('blur'); // Add the 'blur' class when scrolled down
+    body.classList.add('blur'); // 'blur' class when scrolled down
   } else {
-    body.classList.remove('blur'); // Remove the 'blur' class when at the top
+    body.classList.remove('blur'); // remove 'blur' class when at the top
   }
 });
 
