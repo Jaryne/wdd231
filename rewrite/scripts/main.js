@@ -1,4 +1,5 @@
-// js/main.js
+import { initializeVisitorCounter } from './visitorCounter.js';  // Import the function
+
 document.addEventListener('DOMContentLoaded', async () => {
   const response = await fetch('data/artworks.json');
   const data = await response.json();
@@ -50,26 +51,7 @@ document.getElementById("music-toggle").addEventListener("click", function () {
   }
 });
 
+// Initialize visitor counter
 document.addEventListener("DOMContentLoaded", function () {
-  let visitorCount = localStorage.getItem("visitorCount") || 0;
-  visitorCount++;
-  localStorage.setItem("visitorCount", visitorCount);
-
-  const hoverElement = document.getElementById("visitor-counter");
-  const counterDisplay = document.getElementById("counter-display");
-
-  hoverElement.addEventListener("mouseenter", function () {
-    counterDisplay.textContent = "Visitors: " + visitorCount;
-    counterDisplay.style.display = "inline";
-  });
-
-  hoverElement.addEventListener("mouseleave", function () {
-    counterDisplay.style.display = "none";
-  });
+  initializeVisitorCounter("visitor-counter", "counter-display");  // Pass the IDs for the elements
 });
-
-// js/data.js
-async function loadJSON(url) {
-    const res = await fetch(url);
-    return await res.json();
-  }  
