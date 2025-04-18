@@ -31,8 +31,9 @@
 
     /* Hero Section */
     .hero {
-        display: block;
-        height: 60vh;
+        display: flex;
+        margin: 3rem;
+        margin-top: 8rem;
     }
 
     .hero-text h2 {
@@ -75,8 +76,8 @@
 
     /* Hero Section */
     .hero {
-        height: 50vh;
-        display: block;
+        display: flex;
+        margin: 10rem 8rem 5rem;
     }
 
     .hero-text h2 {
@@ -118,11 +119,20 @@
 
     /* Hero Section */
     .hero {
-        height: 50vh;
-        display: block;
+        display: flex;
+        margin: 10rem 12rem 5rem;
     }
 
     .hero-text h2 {
         font-size: 5rem;
+    }
+}
+
+/* Large Screens (above 1200px) */
+@media (min-width: 1200px) {
+
+    /* Hero Section */
+    .hero {
+        margin: 17rem 20rem 20rem;
     }
 }
