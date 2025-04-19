@@ -1,22 +1,24 @@
-/* Mobile Styles (max-width: 768px) */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
-    /* Artists Section */
-    .artists-main {
-        padding: 2rem;
-        display: block;
-        /* Stacked layout */
+    html {
+        font-size: 90%;
     }
 
-    #artist-list {
+    .artists-main,
+    #artist-list,
+    .artist-card,
+    .artist-info {
         display: block;
         padding: 1rem;
+        width: 100%;
+    }
+
+    .artists-main {
+        padding: 2rem;
     }
 
     .artist-card {
-        display: block;
         margin-bottom: 2rem;
-        padding: 1rem;
     }
 
     .artist-image {
@@ -24,115 +26,100 @@
         min-height: 200px;
     }
 
-    .artist-info {
-        width: 100%;
-        padding: 1rem;
+    .hamburger {
+        cursor: pointer;
+        font-size: 18px;
+        color: #c8c8c8;
+        position: relative;
+        z-index: 1001;
     }
 
-    /* Hero Section */
-    .hero {
-        display: flex;
-        margin: 3rem;
-        margin-top: 8rem;
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0);
+        display: none;
+        z-index: 999;
+        transition: background-color 0.3s ease-in-out;
     }
 
-    .hero-text h2 {
-        font-size: 2rem;
+    .show {
+        display: block;
     }
 
-    /* Socials */
-    .socials {
-        bottom: 20%;
-        /* Move social icons */
-    }
-}
-
-/* Tablet Styles (768px to 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .artists-main {
-        padding: 3rem;
-    }
-
-    #artist-list {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        padding: 1.5rem;
-    }
-
-    .artist-card {
+    #navMenu {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        background: #121212;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
     }
 
-    .artist-image {
-        width: 100%;
-        min-height: 220px;
+    #navMenu.slide-in {
+        transform: translateX(-100%);
     }
 
-    .artist-info {
-        width: 100%;
-        padding: 1rem;
+    #navMenu li {
+        list-style: none;
+        margin: 10px;
     }
 
-    /* Hero Section */
-    .hero {
-        display: flex;
-        margin: 10rem 8rem 5rem;
+    #navMenu li a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        padding: 10px;
     }
 
-    .hero-text h2 {
-        font-size: 3.5rem;
-    }
-
-    /* Socials */
     .socials {
-        bottom: 15%;
-        /* Socials adjustment */
-    }
-}
-
-/* Small Desktop Styles (1024px to 1200px) */
-@media (min-width: 1024px) and (max-width: 1200px) {
-    .artists-main {
-        padding: 4rem;
-    }
-
-    #artist-list {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        padding: 2rem;
-    }
-
-    .artist-card {
+        position: fixed;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-120%);
         display: flex;
         flex-direction: column;
+        gap: 1rem;
+        z-index: 2;
     }
 
-    .artist-image {
-        width: 100%;
-        min-height: 240px;
-    }
-
-    .artist-info {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    /* Hero Section */
-    .hero {
-        display: flex;
-        margin: 10rem 12rem 5rem;
-    }
-
-    .hero-text h2 {
-        font-size: 5rem;
+    @media (max-width: 600px) {
+        .socials img {
+            width: 24px;
+            height: 24px;
+        }
     }
 }
 
-/* Large Screens (above 1200px) */
-@media (min-width: 1200px) {
+@media (min-width: 993px) {
+    .hamburger {
+        display: none;
+    }
 
-    /* Hero Section */
-    .hero {
-        margin: 17rem 20rem 20rem;
+    #navMenu {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        transform: none !important;
+        background: none;
+        height: auto;
+        width: auto;
+    }
+
+    #navMenu li {
+        margin: 0 1rem;
+    }
+
+    #overlay {
+        display: none !important;
     }
 }
